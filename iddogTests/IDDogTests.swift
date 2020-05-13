@@ -1,15 +1,7 @@
-//
-//  iddogTests.swift
-//  iddogTests
-//
-//  Created by Rafael Henrique Zilião on 13/05/20.
-//  Copyright © 2020 Rafael Henrique Zilião. All rights reserved.
-//
-
 import XCTest
 @testable import iddog
 
-class iddogTests: XCTestCase {
+class IDDogTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

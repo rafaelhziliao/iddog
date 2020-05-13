@@ -1,0 +1,28 @@
+PODS:
+  - Nuke (9.0.0-rc.2)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - SwiftLint (0.34.0)
+
+DEPENDENCIES:
+  - Nuke (~> 9.0.0-rc.2)
+  - R.swift (~> 5.0.0)
+  - SwiftLint (~> 0.34.0)
+
+SPEC REPOS:
+  trunk:
+    - Nuke
+    - R.swift
+    - R.swift.Library
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Nuke: e9d7c7267c185104dfe7ea616a33e498cbcaf4ce
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
+
+PODFILE CHECKSUM: 479a053aa888379c224096df6c6c04934a8d9d71
+
+COCOAPODS: 1.9.1

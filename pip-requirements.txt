@@ -1,0 +1,9 @@
+#
+####### pip-requirements #######
+#
+###### Requirements without Version Specifiers ######
+tornado
+nose
+lizard
+xUnique
+#
