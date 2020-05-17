@@ -11,6 +11,7 @@ target 'iddog' do
   pod 'R.swift', '~> 5.0.0'
   pod 'SwiftLint', '~> 0.34.0'
   pod 'Nuke', '~> 9.0.0-rc.2'
+  pod 'KeychainSwift', '~> 19.0'
 
   target 'iddogTests' do
     inherit! :search_paths

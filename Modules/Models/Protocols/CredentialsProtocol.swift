@@ -1,5 +1,5 @@
 import Foundation
 
-protocol CrendentialsProtocol {
+protocol CredentialsProtocol {
     var user: UserProtocol { get }
 }

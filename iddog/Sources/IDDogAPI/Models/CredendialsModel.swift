@@ -1,6 +1,6 @@
 import Foundation
 
-struct CredentialsModel: CrendentialsProtocol {
+struct CredentialsModel: CredentialsProtocol {
     let user: UserProtocol
 }
 
