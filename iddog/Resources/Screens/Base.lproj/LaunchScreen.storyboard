@@ -22,11 +22,19 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Rafael Zilião" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FC-bL-aCI">
+                                <rect key="frame" x="167.5" y="847" width="79" height="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7bw-OL-o2I" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3ph-rw-bI1"/>
+                            <constraint firstItem="5FC-bL-aCI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HgH-MQ-OVJ"/>
                             <constraint firstItem="7bw-OL-o2I" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="b5d-ok-QbR"/>
+                            <constraint firstItem="5FC-bL-aCI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s2m-0C-gs5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

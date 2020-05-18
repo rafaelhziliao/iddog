@@ -16,9 +16,12 @@
 		522B4B3E2AF8092632BFCD6CF2798EE6 /* CredendialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636C53435ADADB55C9DCB4D906540B89 /* CredendialsModel.swift */; };
 		B948A4866EADC3CFB71554948AC261CB /* CredentialStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5C740836BD024697C067B055C21668 /* CredentialStorage.swift */; };
 		796AC0274D4E0B5C91DF2F5CCB3671CD /* CredentialsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A203503D8B2A731609828777C7E9BD0D /* CredentialsProtocol.swift */; };
+		1F6693164FE4FF9D31EF83F62DA60E8C /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */; };
 		E05334BC999615FC1520FBEFCAA20D72 /* Endpoint+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3535F1CF753D03802C01A6D3048137A5 /* Endpoint+Defaults.swift */; };
 		CFB32A58AA2134503EC3B9DA0016BDF4 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CED61EE95AC5230F4B32B2BFF8591B /* EndpointProtocol.swift */; };
+		114D9900FC1C6FEC1CB6E59EAF33DFBB /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CD5FECFC7FDB4A4A3E76B1435A3822 /* FontHelper.swift */; };
 		AEDC7B0D1B85623F7387524D6D903F95 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D7A820CAC09BA8C28D5A6B23789DCB /* HTTPMethod.swift */; };
+		43AB419E337578843561950B6295057E /* HelveticaNeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324C919BD64092C84E7182D0A069A05 /* HelveticaNeue.swift */; };
 		33A89CCA2FD037FA33F5BBCDA8C72DDD /* IDDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76FEDCD57474FD00D2FDDFF27D61EEE /* IDDogTests.swift */; };
 		BB6EE8A8667A501FB37C88CE9FA3AF0C /* IDDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DAB810531A24FD43FCD274165517A /* IDDogUITests.swift */; };
 		AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */; };
@@ -26,6 +29,7 @@
 		8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */; };
 		80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */; };
 		5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */; };
+		2EF89413B509465FA10B97818BE450DB /* MainSceneConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242132B2F7D2A58DA9F31F0C7EFAA41 /* MainSceneConstants.swift */; };
 		7710F4936DE056D71BCA5AD24F1A3043 /* MainSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */; };
 		B0CF6CB95F73727E18FA4915410B41A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */; };
 		A3D59C37EBCA8C94AE8CEE73AF8FD115 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA292D0FF658482E8102199BA435954D /* MainWorker.swift */; };
@@ -38,6 +42,7 @@
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
 		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
+		FAE16303D6B098A61F400A1EB99F2F10 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6037A1C98609D898F7C2919A7F053 /* UIFont+Extensions.swift */; };
 		5C6E76F6F93012AED50D937AA7409DEA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */; };
 		B91810FAD30C76DE5439D5F357F52D42 /* URLComponents+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE04D2710348C1464BB694FE3511132 /* URLComponents+Endpoint.swift */; };
 		F36EF8A774E713657F3E672A94CDB9BC /* URLRequest+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A2B9DBBC70298C1D568C176A89D4 /* URLRequest+Endpoint.swift */; };
@@ -76,9 +81,12 @@
 		636C53435ADADB55C9DCB4D906540B89 /* CredendialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredendialsModel.swift; sourceTree = "<group>"; };
 		3C5C740836BD024697C067B055C21668 /* CredentialStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialStorage.swift; sourceTree = "<group>"; };
 		A203503D8B2A731609828777C7E9BD0D /* CredentialsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsProtocol.swift; sourceTree = "<group>"; };
+		E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		3535F1CF753D03802C01A6D3048137A5 /* Endpoint+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Defaults.swift"; sourceTree = "<group>"; };
 		95CED61EE95AC5230F4B32B2BFF8591B /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		69CD5FECFC7FDB4A4A3E76B1435A3822 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		78D7A820CAC09BA8C28D5A6B23789DCB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0324C919BD64092C84E7182D0A069A05 /* HelveticaNeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelveticaNeue.swift; sourceTree = "<group>"; };
 		D76FEDCD57474FD00D2FDDFF27D61EEE /* IDDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDDogTests.swift; sourceTree = "<group>"; };
 		F73DAB810531A24FD43FCD274165517A /* IDDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDDogUITests.swift; sourceTree = "<group>"; };
 		0369764C9C55EEE2A52445B8F1544F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +96,7 @@
 		DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		B242132B2F7D2A58DA9F31F0C7EFAA41 /* MainSceneConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneConstants.swift; sourceTree = "<group>"; };
 		093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneFactory.swift; sourceTree = "<group>"; };
 		0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BA292D0FF658482E8102199BA435954D /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
 		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
+		44B6037A1C98609D898F7C2919A7F053 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		7EE04D2710348C1464BB694FE3511132 /* URLComponents+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Endpoint.swift"; sourceTree = "<group>"; };
 		F493A2B9DBBC70298C1D568C176A89D4 /* URLRequest+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Endpoint.swift"; sourceTree = "<group>"; };
@@ -169,6 +179,7 @@
 		18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */,
 				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
 			);
 			path = Protocols;
@@ -190,6 +201,7 @@
 				DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */,
 				2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */,
 				E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */,
+				B242132B2F7D2A58DA9F31F0C7EFAA41 /* MainSceneConstants.swift */,
 				093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */,
 				0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */,
 				BA292D0FF658482E8102199BA435954D /* MainWorker.swift */,
@@ -210,6 +222,7 @@
 			children = (
 				D30C2D7B4552D52363AD7F09B6833E96 /* Array+Extensions.swift */,
 				1853DC73EEEADDD01DA752D82FE3215E /* NSLayoutConstraint+Extensions.swift */,
+				44B6037A1C98609D898F7C2919A7F053 /* UIFont+Extensions.swift */,
 				0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
@@ -235,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				42EBC9A5B367663394E2356F27B39BCA /* Extensions */,
+				4C0F2AFFBCA9C0D30177A5668F20D878 /* Helpers */,
 				18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */,
 			);
 			path = Commons;
@@ -408,6 +422,15 @@
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4C0F2AFFBCA9C0D30177A5668F20D878 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				69CD5FECFC7FDB4A4A3E76B1435A3822 /* FontHelper.swift */,
+				0324C919BD64092C84E7182D0A069A05 /* HelveticaNeue.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F6CC81C575D81D20C6E3737175324413 /* Endpoints */ = {
@@ -676,13 +699,17 @@
 				522B4B3E2AF8092632BFCD6CF2798EE6 /* CredendialsModel.swift in Sources */,
 				B948A4866EADC3CFB71554948AC261CB /* CredentialStorage.swift in Sources */,
 				796AC0274D4E0B5C91DF2F5CCB3671CD /* CredentialsProtocol.swift in Sources */,
+				1F6693164FE4FF9D31EF83F62DA60E8C /* CustomFont.swift in Sources */,
 				E05334BC999615FC1520FBEFCAA20D72 /* Endpoint+Defaults.swift in Sources */,
 				CFB32A58AA2134503EC3B9DA0016BDF4 /* EndpointProtocol.swift in Sources */,
+				114D9900FC1C6FEC1CB6E59EAF33DFBB /* FontHelper.swift in Sources */,
 				AEDC7B0D1B85623F7387524D6D903F95 /* HTTPMethod.swift in Sources */,
+				43AB419E337578843561950B6295057E /* HelveticaNeue.swift in Sources */,
 				AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */,
 				8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */,
 				80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */,
 				5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */,
+				2EF89413B509465FA10B97818BE450DB /* MainSceneConstants.swift in Sources */,
 				7710F4936DE056D71BCA5AD24F1A3043 /* MainSceneFactory.swift in Sources */,
 				B0CF6CB95F73727E18FA4915410B41A0 /* MainViewController.swift in Sources */,
 				A3D59C37EBCA8C94AE8CEE73AF8FD115 /* MainWorker.swift in Sources */,
@@ -693,6 +720,7 @@
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
 				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,
+				FAE16303D6B098A61F400A1EB99F2F10 /* UIFont+Extensions.swift in Sources */,
 				5C6E76F6F93012AED50D937AA7409DEA /* UIView+Extensions.swift in Sources */,
 				B91810FAD30C76DE5439D5F357F52D42 /* URLComponents+Endpoint.swift in Sources */,
 				F36EF8A774E713657F3E672A94CDB9BC /* URLRequest+Endpoint.swift in Sources */,

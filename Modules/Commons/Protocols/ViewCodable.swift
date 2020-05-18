@@ -1,14 +1,14 @@
 import UIKit
 
-public protocol ViewCodable where Self: UIView {
+public protocol ViewCodable {
     func buildViewHierarchy()
     func setupConstraints()
     func additionalSetup()
-    func setupView()
+    func buildView()
 }
 
-extension ViewCodable where Self: UIView {
-    public func setupView() {
+extension ViewCodable {
+    public func buildView() {
         buildViewHierarchy()
         setupConstraints()
         additionalSetup()
