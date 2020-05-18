@@ -14,7 +14,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func safeAreaBottom(
         safeAreaView: UIView,
         constant: Float = 0
@@ -26,7 +26,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func insetConstraints(
         inSuperview superView: UIView,
         withInset inset: UIEdgeInsets? = nil
@@ -38,7 +38,7 @@ extension UIView {
         )
         constraints.active()
     }
-    
+
     func topConstraint(
         parentView: UIView,
         constant: Float = 0
@@ -49,7 +49,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func leftConstraint(
         parentView: UIView,
         constant: Float = 0
@@ -60,7 +60,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func rightConstraint(
         parentView: UIView,
         constant: Float = 0
@@ -72,7 +72,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func bottomConstraint(
         parentView: UIView,
         constant: Float = 0
@@ -84,7 +84,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func overConstraint(
         topItem: UIView,
         constant: Float = 0
@@ -96,7 +96,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func aside(
         leftItem: UIView,
         constant: Float = 0
@@ -108,7 +108,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func heightConstraint(constant: Float = 0) {
         let constraint = NSLayoutConstraint.height(
             view: self,
@@ -116,7 +116,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func heightConstraintEqualTo(
         parentView: UIView,
         constant: Float = 0
@@ -128,7 +128,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func widthConstraint(constant: Float = 0) {
         let constraint = NSLayoutConstraint.width(
             view: self,
@@ -136,7 +136,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func widthConstraintEqualTo(
         parentView: UIView,
         constant: Float = 0
@@ -148,7 +148,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func aspectRadioConstraint(constant: Float) {
         let constraint = NSLayoutConstraint.aspectRadio(
             view: self,
@@ -156,7 +156,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func centerYConstraint(
         parentView: UIView,
         constant: Float = 0
@@ -168,7 +168,7 @@ extension UIView {
         )
         constraint.isActive = true
     }
-    
+
     func centerXConstraint(
         parentView: UIView,
         constant: Float = 0

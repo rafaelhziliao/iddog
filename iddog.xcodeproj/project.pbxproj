@@ -34,6 +34,7 @@
 		3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82687F76EC9F23AD123F76B5B6E13 /* NetworkProviderProtocol.swift */; };
 		3B17A8E0C6634C1CE8ED49F0893CE8D3 /* Pods_iddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */; };
 		B0013A3BA253C3BA3A2B143C90E6D980 /* Pods_iddogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */; };
+		10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */; };
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
 		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
@@ -99,6 +100,7 @@
 		B41ADBA90FDF14F3F037AC86E7745D2F /* Pods-iddogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddogTests.release.xcconfig"; path = "Target Support Files/Pods-iddogTests/Pods-iddogTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
 		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 			path = iddogTests;
 			sourceTree = "<group>";
 		};
+		18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2C35D3C9502C6006105B5730588C57D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		42EBC9A5B367663394E2356F27B39BCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D30C2D7B4552D52363AD7F09B6833E96 /* Array+Extensions.swift */,
+				1853DC73EEEADDD01DA752D82FE3215E /* NSLayoutConstraint+Extensions.swift */,
+				0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +231,15 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		5AE01F50803EE1ECFD223ADF972E06CF /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				42EBC9A5B367663394E2356F27B39BCA /* Extensions */,
+				18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		66614CFBE927993AD6B06B5E2B285DA2 /* Properties */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +254,7 @@
 				D9FDAA8282F8615036C1247EB564AE83 /* Assets */,
 				66614CFBE927993AD6B06B5E2B285DA2 /* Properties */,
 				5841851CC56391426E65A79DF02BB7D5 /* Screens */,
+				F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -378,33 +408,6 @@
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		5AE01F50803EE1ECFD223ADF972E06CF /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				42EBC9A5B367663394E2356F27B39BCA /* Extensions */,
-				18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */,
-			);
-			path = Commons;
-			sourceTree = "<group>";
-		};
-		18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		42EBC9A5B367663394E2356F27B39BCA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D30C2D7B4552D52363AD7F09B6833E96 /* Array+Extensions.swift */,
-				1853DC73EEEADDD01DA752D82FE3215E /* NSLayoutConstraint+Extensions.swift */,
-				0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F6CC81C575D81D20C6E3737175324413 /* Endpoints */ = {
@@ -686,6 +689,7 @@
 				B7B651B0FC5329DBDFD8845744680FA8 /* NSLayoutConstraint+Extensions.swift in Sources */,
 				836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */,
 				3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */,
+				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
 				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,

@@ -28,15 +28,15 @@ public extension NSLayoutConstraint {
                 constant: Float(inset?.bottom ?? 0)
             )
         ]
-        
+
     }
-    
+
     static func safeAreaTop(
         safeAreaView: UIView,
         otherView: UIView,
         constant: Float = 0,
         statusBar: Bool = false
-    )-> NSLayoutConstraint {
+    ) -> NSLayoutConstraint {
         if #available(iOS 11.0, *) {
             return safeAreaView
                 .safeAreaLayoutGuide
@@ -47,11 +47,11 @@ public extension NSLayoutConstraint {
             )
         } else {
             var finalConstant = constant
-            
+
             if statusBar {
                 finalConstant = -20 + constant
             }
-            
+
             return top(
                 firstView: safeAreaView,
                 secondView: otherView,
@@ -59,7 +59,7 @@ public extension NSLayoutConstraint {
             )
         }
     }
-    
+
     static func safeAreaBottom(
         safeAreaView: UIView,
         otherView: UIView,
@@ -77,11 +77,11 @@ public extension NSLayoutConstraint {
             return bottom(
                 firstView: safeAreaView,
                 secondView: otherView,
-                constant:constant
+                constant: constant
             )
         }
     }
-    
+
     static func top(
         firstView: UIView,
         secondView: UIView,
@@ -142,7 +142,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func over(
         topItem: UIView,
         bottomItem: UIView,
@@ -158,7 +158,7 @@ public extension NSLayoutConstraint {
             constant: -1 * CGFloat(constant)
         )
     }
-    
+
     static func aside(
         left: UIView,
         right: UIView,
@@ -174,7 +174,7 @@ public extension NSLayoutConstraint {
             constant: -1 * CGFloat(constant)
         )
     }
-    
+
     static func height(
         view: UIView,
         constant: Float
@@ -189,7 +189,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func heightEqualTo(
         parentView: UIView,
         view: UIView,
@@ -205,7 +205,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func width(
         view: UIView,
         constant: Float
@@ -220,7 +220,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func widthEqualTo(
         parentView: UIView,
         view: UIView,
@@ -236,7 +236,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func aspectRadio(
         view: UIView,
         constant: Float
@@ -251,7 +251,7 @@ public extension NSLayoutConstraint {
             constant: 0
         )
     }
-    
+
     static func centerY(
         firstView: UIView,
         secondView: UIView,
@@ -267,7 +267,7 @@ public extension NSLayoutConstraint {
             constant: CGFloat(constant)
         )
     }
-    
+
     static func centerX(
         firstView: UIView,
         secondView: UIView,
@@ -284,4 +284,3 @@ public extension NSLayoutConstraint {
             )
     }
 }
-

@@ -14,4 +14,3 @@ extension ViewCodable where Self: UIView {
         additionalSetup()
     }
 }
-
