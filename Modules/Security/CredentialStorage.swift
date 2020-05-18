@@ -1,13 +1,12 @@
 import Foundation
 import KeychainSwift
 
-public final class CredentialStorage {
+public final class CredentialStorage: SecurityStorageProtocol {
     struct Keys {
         static let authorizationKey = "Authorization"
     }
 
-    static let shared = CredentialStorage()
-    private let service: SecurityServiceProtocol
+    public let service: SecurityServiceProtocol
     private let queue = DispatchQueue(label: "credentialstorage.privatequeue")
 
     init(service: SecurityServiceProtocol = KeychainSwift()) {
@@ -23,19 +22,19 @@ public final class CredentialStorage {
         }
     }
 
-    func getAccessTokenSync() -> String? {
+    public func getAccessTokenSync() -> String? {
         return queue.sync {
             return self.authorizationValue
         }
     }
 
-    func setAccessTokenAsync(_ token: String?) {
+    public func setAccessTokenAsync(_ token: String?) {
         queue.async {
             self.authorizationValue = token
         }
     }
 
-    func clear() {
+    public func clear() {
         _ = service.clear()
     }
 }
