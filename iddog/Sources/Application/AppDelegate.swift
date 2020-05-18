@@ -2,18 +2,24 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    lazy var window: UIWindow? = {
+       return UIWindow()
+    }()
+
+    lazy var mainScene: MainSceneFactory = {
+        guard let window = self.window else { fatalError("Failed to create window") }
+
+        let mainScene = MainSceneFactory(window: window)
+        return mainScene
+    }()
 
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
+        mainScene.make()
         window?.makeKeyAndVisible()
-        let controller = ViewController()
-        controller.view.backgroundColor = .green
-        window?.rootViewController = UINavigationController(rootViewController: controller)
         return true
     }
 }

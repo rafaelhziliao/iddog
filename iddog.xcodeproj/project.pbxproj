@@ -22,11 +22,18 @@
 		BB6EE8A8667A501FB37C88CE9FA3AF0C /* IDDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DAB810531A24FD43FCD274165517A /* IDDogUITests.swift */; };
 		AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */; };
 		26CE61432F69866252C197FC0BA458A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D0D9FDD44441A31082BEEA75A75A6 /* LaunchScreen.storyboard */; };
+		8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */; };
+		80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */; };
+		5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */; };
+		7710F4936DE056D71BCA5AD24F1A3043 /* MainSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */; };
+		B0CF6CB95F73727E18FA4915410B41A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */; };
+		A3D59C37EBCA8C94AE8CEE73AF8FD115 /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA292D0FF658482E8102199BA435954D /* MainWorker.swift */; };
 		836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EED204D343B8C1FD12C14DA085C185 /* NetworkError.swift */; };
 		3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82687F76EC9F23AD123F76B5B6E13 /* NetworkProviderProtocol.swift */; };
 		3B17A8E0C6634C1CE8ED49F0893CE8D3 /* Pods_iddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */; };
 		B0013A3BA253C3BA3A2B143C90E6D980 /* Pods_iddogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */; };
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
+		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
 		B91810FAD30C76DE5439D5F357F52D42 /* URLComponents+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE04D2710348C1464BB694FE3511132 /* URLComponents+Endpoint.swift */; };
 		F36EF8A774E713657F3E672A94CDB9BC /* URLRequest+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493A2B9DBBC70298C1D568C176A89D4 /* URLRequest+Endpoint.swift */; };
@@ -72,6 +79,12 @@
 		8D7F1DAB7345679890887CFA08D9E8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9DE4FFEE5B6618F49A1A138CC0A662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainSwift+SecurityDataStorage.swift"; sourceTree = "<group>"; };
+		DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneFactory.swift; sourceTree = "<group>"; };
+		0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BA292D0FF658482E8102199BA435954D /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		48EED204D343B8C1FD12C14DA085C185 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AAA82687F76EC9F23AD123F76B5B6E13 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
 		94E07D0D9FF8A7CDF5ED20A23DB1ADEE /* Pods-iddog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddog.debug.xcconfig"; path = "Target Support Files/Pods-iddog/Pods-iddog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +94,7 @@
 		7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
+		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
 		7EE04D2710348C1464BB694FE3511132 /* URLComponents+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Endpoint.swift"; sourceTree = "<group>"; };
 		F493A2B9DBBC70298C1D568C176A89D4 /* URLRequest+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Endpoint.swift"; sourceTree = "<group>"; };
@@ -311,6 +325,7 @@
 			children = (
 				93589D24D4EB2B764DC793A7F7D69ED6 /* Application */,
 				A2F7A58FDB9B10EA0D6B366A28509E50 /* IDDogAPI */,
+				51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */,
 				1444612158A8F2658BEE00DB73F71952 /* ViewController.swift */,
 			);
 			path = Sources;
@@ -335,14 +350,25 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		F82707EBEBCA88667E59D2272617501C /* Security */ = {
+		51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3C5C740836BD024697C067B055C21668 /* CredentialStorage.swift */,
-				CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */,
-				9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */,
+				39B7D05A046876AA27E4E7CBA5F52077 /* Main */,
 			);
-			path = Security;
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		39B7D05A046876AA27E4E7CBA5F52077 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */,
+				2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */,
+				E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */,
+				093B34611417FF8F3D65F6C54BA50698 /* MainSceneFactory.swift */,
+				0B4AE89BACC3BC9A4C748984B94EB8C4 /* MainViewController.swift */,
+				BA292D0FF658482E8102199BA435954D /* MainWorker.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F6CC81C575D81D20C6E3737175324413 /* Endpoints */ = {
@@ -353,6 +379,17 @@
 				590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		F82707EBEBCA88667E59D2272617501C /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				3C5C740836BD024697C067B055C21668 /* CredentialStorage.swift */,
+				CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */,
+				9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */,
+				5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,9 +640,16 @@
 				CFB32A58AA2134503EC3B9DA0016BDF4 /* EndpointProtocol.swift in Sources */,
 				AEDC7B0D1B85623F7387524D6D903F95 /* HTTPMethod.swift in Sources */,
 				AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */,
+				8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */,
+				80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */,
+				5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */,
+				7710F4936DE056D71BCA5AD24F1A3043 /* MainSceneFactory.swift in Sources */,
+				B0CF6CB95F73727E18FA4915410B41A0 /* MainViewController.swift in Sources */,
+				A3D59C37EBCA8C94AE8CEE73AF8FD115 /* MainWorker.swift in Sources */,
 				836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */,
 				3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */,
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
+				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,
 				B91810FAD30C76DE5439D5F357F52D42 /* URLComponents+Endpoint.swift in Sources */,
 				F36EF8A774E713657F3E672A94CDB9BC /* URLRequest+Endpoint.swift in Sources */,
