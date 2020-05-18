@@ -1,9 +1,18 @@
 import UIKit
 
-protocol MainPresentationLogic {}
+protocol MainPresentationLogic {
+    func presentCategories()
+    func presentLogin()
+}
 
 final class MainPresenter {
     weak var viewController: MainDisplayLogic?
 }
 
-extension MainPresenter: MainPresentationLogic {}
+extension MainPresenter: MainPresentationLogic {
+    func presentCategories() {
+
+    }
+
+    func presentLogin() {}
+}

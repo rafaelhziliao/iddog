@@ -2,7 +2,10 @@ import UIKit
 
 typealias RoutingLogic = (MainRoutingLogic & MainDataPassing)
 
-protocol MainRoutingLogic {}
+protocol MainRoutingLogic {
+    func routeToCategories()
+    func routeToLogin()
+}
 
 protocol MainDataPassing {
     var dataStore: MainDataStore? { get }
@@ -17,6 +20,10 @@ final class MainRouter: NSObject {
     }
 }
 
-extension MainRouter: MainRoutingLogic {}
+extension MainRouter: MainRoutingLogic {
+    func routeToCategories() {}
+
+    func routeToLogin() {}
+}
 
 extension MainRouter: MainDataPassing {}

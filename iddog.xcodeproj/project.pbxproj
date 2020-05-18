@@ -228,6 +228,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4C0F2AFFBCA9C0D30177A5668F20D878 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				69CD5FECFC7FDB4A4A3E76B1435A3822 /* FontHelper.swift */,
+				0324C919BD64092C84E7182D0A069A05 /* HelveticaNeue.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,15 +431,6 @@
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		4C0F2AFFBCA9C0D30177A5668F20D878 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				69CD5FECFC7FDB4A4A3E76B1435A3822 /* FontHelper.swift */,
-				0324C919BD64092C84E7182D0A069A05 /* HelveticaNeue.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F6CC81C575D81D20C6E3737175324413 /* Endpoints */ = {

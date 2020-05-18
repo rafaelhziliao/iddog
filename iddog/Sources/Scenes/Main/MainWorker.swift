@@ -1,6 +1,8 @@
 import UIKit
 
-protocol ExternalServices {}
+protocol ExternalServices {
+    func requestCrendentials(result: (String?) -> Void)
+}
 
 final class MainWorker {
     let network: NetworkProviderProtocol
@@ -15,4 +17,11 @@ final class MainWorker {
     }
 }
 
-extension MainWorker: ExternalServices {}
+extension MainWorker: ExternalServices {
+    func requestCrendentials(result: (String?) -> Void) {
+        guard let token = credentialStorage.getAccessTokenSync() else {
+            return result(nil)
+        }
+        result(token)
+    }
+}

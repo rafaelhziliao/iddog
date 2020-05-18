@@ -1,6 +1,9 @@
 import UIKit
 
-protocol MainDisplayLogic: class {}
+protocol MainDisplayLogic: class {
+    func displayCategories()
+    func displayLogin()
+}
 
 final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
@@ -57,6 +60,7 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor?.requestCredentials()
     }
 }
 
@@ -80,4 +84,13 @@ extension MainViewController: ViewCodable {
 
 }
 
-extension MainViewController: MainDisplayLogic {}
+extension MainViewController: MainDisplayLogic {
+    func displayCategories() {
+        router?.routeToCategories()
+    }
+
+    func displayLogin() {
+        router?.routeToLogin()
+    }
+
+}
