@@ -9,27 +9,19 @@ protocol MainDataStore {
 }
 
 final class MainInteractor: MainDataStore {
-    let presenter: MainPresentationLogic
-    let worker: ExternalServices
+    var presenter: MainPresentationLogic?
+    var worker: ExternalServices?
     var token: String = ""
-
-    init(
-        presenter: MainPresentationLogic,
-        worker: ExternalServices
-    ) {
-        self.presenter = presenter
-        self.worker = worker
-    }
 }
 
 extension MainInteractor: MainBusinessLogic {
     func requestCredentials() {
-        worker.requestCrendentials { token in
+        worker?.requestCrendentials { [weak self] token in
             if let token = token {
-                self.token = token
-                presenter.presentCategories()
+                self?.token = token
+                self?.presenter?.presentCategories()
             } else {
-                presenter.presentLogin()
+                self?.presenter?.presentLogin()
             }
         }
     }

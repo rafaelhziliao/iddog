@@ -7,7 +7,7 @@ protocol MainDisplayLogic: class {
 
 final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
-    var router: RoutingLogic?
+    var router: MainRouterType?
 
     private lazy var appNameLabel: UILabel = {
         let label = UILabel()
@@ -47,19 +47,15 @@ final class MainViewController: UIViewController {
         buildView()
     }
 
-    convenience init(
-        interactor: MainBusinessLogic?,
-        router: RoutingLogic
-    ) {
+    convenience init() {
         self.init(nibName: nil, bundle: nil)
-        buildView()
-        self.interactor = interactor
     }
 
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildView()
         interactor?.requestCredentials()
     }
 }

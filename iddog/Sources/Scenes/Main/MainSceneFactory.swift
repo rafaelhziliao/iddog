@@ -8,29 +8,23 @@ final class MainSceneFactory {
     }
 
     func make() {
+        let viewController = MainViewController()
+        let interactor = MainInteractor()
         let presenter = MainPresenter()
+        let router = MainRouter(window: window)
 
         let worker = MainWorker(
             network: URLSessionProvider(),
             credentialStorage: CredentialStorage()
         )
 
-        let interactor = MainInteractor(
-            presenter: presenter,
-            worker: worker
-        )
-
-        let router = MainRouter(
-            dataStore: interactor
-        )
-
-        let viewController = MainViewController(
-            interactor: interactor,
-            router: router
-        )
-
-        router.viewController = viewController
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.worker = worker
+        interactor.presenter = presenter
         presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
 
         window.rootViewController = viewController
     }

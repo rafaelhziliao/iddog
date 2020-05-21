@@ -14,5 +14,7 @@ extension MainPresenter: MainPresentationLogic {
 
     }
 
-    func presentLogin() {}
+    func presentLogin() {
+        viewController?.displayLogin()
+    }
 }

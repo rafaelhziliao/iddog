@@ -1,6 +1,6 @@
 import UIKit
 
-typealias RoutingLogic = (MainRoutingLogic & MainDataPassing)
+typealias MainRouterType = (MainRoutingLogic & MainDataPassing)
 
 protocol MainRoutingLogic {
     func routeToCategories()
@@ -11,19 +11,23 @@ protocol MainDataPassing {
     var dataStore: MainDataStore? { get }
 }
 
-final class MainRouter: NSObject {
+final class MainRouter {
     weak var viewController: MainViewController?
-    let dataStore: MainDataStore?
+    unowned let window: UIWindow
+    var dataStore: MainDataStore?
 
-    init(dataStore: MainDataStore) {
-        self.dataStore = dataStore
+    init(window: UIWindow) {
+        self.window = window
     }
 }
 
 extension MainRouter: MainRoutingLogic {
     func routeToCategories() {}
 
-    func routeToLogin() {}
+    func routeToLogin() {
+        let loginScene = LoginSceneFactory(window: window)
+        loginScene.make()
+    }
 }
 
 extension MainRouter: MainDataPassing {}
