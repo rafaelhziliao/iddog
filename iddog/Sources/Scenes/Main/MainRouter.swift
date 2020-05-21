@@ -11,7 +11,7 @@ protocol MainDataPassing {
     var dataStore: MainDataStore? { get }
 }
 
-final class MainRouter {
+final class MainRouter: RootSceneType {
     weak var viewController: MainViewController?
     unowned let window: UIWindow
     var dataStore: MainDataStore?

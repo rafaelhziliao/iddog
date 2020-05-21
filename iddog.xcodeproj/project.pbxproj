@@ -26,6 +26,12 @@
 		BB6EE8A8667A501FB37C88CE9FA3AF0C /* IDDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DAB810531A24FD43FCD274165517A /* IDDogUITests.swift */; };
 		AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */; };
 		26CE61432F69866252C197FC0BA458A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D0D9FDD44441A31082BEEA75A75A6 /* LaunchScreen.storyboard */; };
+		6C28384D39EC054F1C6E43E18C842322 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D6B2A60103754BB9548BF0DE649B9 /* LoginInteractor.swift */; };
+		6A4CAF269C19DFD190E27E99FCD736B5 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476450CDEE9D80C3E94E98E9E3C64EA /* LoginPresenter.swift */; };
+		B593A97F4DCDC7203A9E35A53DF0BB2A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16683BC6BC886F39D0581ED7343A4253 /* LoginRouter.swift */; };
+		FDE105D3C293656CA4F33020F2181306 /* LoginSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380F08A71FE8A3B6297A3B7A72654F16 /* LoginSceneFactory.swift */; };
+		1851DB5D8980CF75FD962864AB2A9BD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA31900EF97D80EEFEA1CBF11473F0 /* LoginViewController.swift */; };
+		8A84344A1F1E214A108F96263E3F9D54 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9465508F24B06B1FB576CBE5DD8EE2A9 /* LoginWorker.swift */; };
 		8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */; };
 		80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */; };
 		5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */; };
@@ -39,6 +45,7 @@
 		3B17A8E0C6634C1CE8ED49F0893CE8D3 /* Pods_iddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */; };
 		B0013A3BA253C3BA3A2B143C90E6D980 /* Pods_iddogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */; };
 		10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */; };
+		A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */; };
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
 		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
@@ -93,6 +100,12 @@
 		8D7F1DAB7345679890887CFA08D9E8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9DE4FFEE5B6618F49A1A138CC0A662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF2FC4465D45137FDB5BE12D34C5554 /* KeychainSwift+SecurityDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeychainSwift+SecurityDataStorage.swift"; sourceTree = "<group>"; };
+		F32D6B2A60103754BB9548BF0DE649B9 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		8476450CDEE9D80C3E94E98E9E3C64EA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		16683BC6BC886F39D0581ED7343A4253 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		380F08A71FE8A3B6297A3B7A72654F16 /* LoginSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneFactory.swift; sourceTree = "<group>"; };
+		F1AA31900EF97D80EEFEA1CBF11473F0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9465508F24B06B1FB576CBE5DD8EE2A9 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		DBB9E084907CB149CB7587F99E1D305D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		2A35EDC9A34DD313D378C0640A6BFD3D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		E659DF7143CE5A365FCA11071FC84932 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -110,6 +123,7 @@
 		7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSceneType.swift; sourceTree = "<group>"; };
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
 		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
@@ -180,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */,
+				0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */,
 				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
 			);
 			path = Protocols;
@@ -240,6 +255,7 @@
 		51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF0BAFE2D3192A6F9ADE431C51DCD695 /* Login */,
 				39B7D05A046876AA27E4E7CBA5F52077 /* Main */,
 			);
 			path = Scenes;
@@ -376,6 +392,19 @@
 				D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF0BAFE2D3192A6F9ADE431C51DCD695 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F32D6B2A60103754BB9548BF0DE649B9 /* LoginInteractor.swift */,
+				8476450CDEE9D80C3E94E98E9E3C64EA /* LoginPresenter.swift */,
+				16683BC6BC886F39D0581ED7343A4253 /* LoginRouter.swift */,
+				380F08A71FE8A3B6297A3B7A72654F16 /* LoginSceneFactory.swift */,
+				F1AA31900EF97D80EEFEA1CBF11473F0 /* LoginViewController.swift */,
+				9465508F24B06B1FB576CBE5DD8EE2A9 /* LoginWorker.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D0D0BB91DEF29F9C38D753077E1FFF65 /* iddog */ = {
@@ -706,6 +735,12 @@
 				AEDC7B0D1B85623F7387524D6D903F95 /* HTTPMethod.swift in Sources */,
 				43AB419E337578843561950B6295057E /* HelveticaNeue.swift in Sources */,
 				AAECAD3B2195A2955EE1992EDDFA960B /* KeychainSwift+SecurityDataStorage.swift in Sources */,
+				6C28384D39EC054F1C6E43E18C842322 /* LoginInteractor.swift in Sources */,
+				6A4CAF269C19DFD190E27E99FCD736B5 /* LoginPresenter.swift in Sources */,
+				B593A97F4DCDC7203A9E35A53DF0BB2A /* LoginRouter.swift in Sources */,
+				FDE105D3C293656CA4F33020F2181306 /* LoginSceneFactory.swift in Sources */,
+				1851DB5D8980CF75FD962864AB2A9BD0 /* LoginViewController.swift in Sources */,
+				8A84344A1F1E214A108F96263E3F9D54 /* LoginWorker.swift in Sources */,
 				8FED5F3B4831DA42449F40329D2AA938 /* MainInteractor.swift in Sources */,
 				80E8E841D264FFD9BEA040C47ED7D13A /* MainPresenter.swift in Sources */,
 				5167D0F21AA5EAA32575010599272E07 /* MainRouter.swift in Sources */,
@@ -717,6 +752,7 @@
 				836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */,
 				3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */,
 				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,
+				A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */,
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
 				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,

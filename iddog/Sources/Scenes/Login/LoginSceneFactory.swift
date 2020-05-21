@@ -1,6 +1,6 @@
 import UIKit
 
-final class MainSceneFactory: RootSceneType {
+final class LoginSceneFactory: RootSceneType {
     unowned let window: UIWindow
 
     init(window: UIWindow) {
@@ -8,12 +8,12 @@ final class MainSceneFactory: RootSceneType {
     }
 
     func make() {
-        let viewController = MainViewController()
-        let interactor = MainInteractor()
-        let presenter = MainPresenter()
-        let router = MainRouter(window: window)
+        let viewController = LoginViewController()
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
+        let router = LoginRouter(window: window)
 
-        let worker = MainWorker(
+        let worker = LoginWorker(
             network: URLSessionProvider(),
             credentialStorage: CredentialStorage()
         )
