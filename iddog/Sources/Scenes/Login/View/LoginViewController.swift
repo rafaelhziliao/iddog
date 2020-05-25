@@ -39,6 +39,8 @@ final class LoginViewController: UIViewController {
             and: LoginConstants.emailTextFieldFontSize
         )
         textField.backgroundColor = R.color.appWhite()
+        textField.keyboardType = .emailAddress
+        textField.delegate = self
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -121,5 +123,11 @@ extension LoginViewController: ViewCodable {
 
     func additionalSetup() {
         view.backgroundColor = R.color.appPurple()
+        view.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: view,
+                action: #selector(UIView.endEditing)
+            )
+        )
     }
 }

@@ -39,6 +39,7 @@
 		57389DBA3BC61864EB388B7F8E722749 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038F3CCCCF903CB75F6971190C3CE61 /* LoginRouter.swift */; };
 		2AD688C4C0E48881C13EA020F374BABF /* LoginSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CD25A2A482B32770786B786D58E64 /* LoginSceneFactory.swift */; };
 		220663271FC63D3C8F3BA72FBEAD0F61 /* LoginViewController+LoginDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE34DAA063F80CF252407322025B643 /* LoginViewController+LoginDisplayLogic.swift */; };
+		6A425B99EFE5E953A0B19B485B6BFB46 /* LoginViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B10BC22C6A417C3D067A604490650 /* LoginViewController+TextFieldDelegate.swift */; };
 		EFA8DFF0092FBC675F95CB0FA599AF58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF594494F12BB8AA41400DEE2FD02F6 /* LoginViewController.swift */; };
 		D552E44540D046FE891A70500049C55F /* LoginWorker+LoginExternalCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B14193ECFB5017CF513756A072A5D /* LoginWorker+LoginExternalCalls.swift */; };
 		B8F892BFEC498A440AB548A28C377565 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3685B385D3E7584C95BE4F1EDFAB81E9 /* LoginWorker.swift */; };
@@ -129,6 +130,7 @@
 		E038F3CCCCF903CB75F6971190C3CE61 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		1E2CD25A2A482B32770786B786D58E64 /* LoginSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneFactory.swift; sourceTree = "<group>"; };
 		2BE34DAA063F80CF252407322025B643 /* LoginViewController+LoginDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginDisplayLogic.swift"; sourceTree = "<group>"; };
+		EE6B10BC22C6A417C3D067A604490650 /* LoginViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		1FF594494F12BB8AA41400DEE2FD02F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		785B14193ECFB5017CF513756A072A5D /* LoginWorker+LoginExternalCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginWorker+LoginExternalCalls.swift"; sourceTree = "<group>"; };
 		3685B385D3E7584C95BE4F1EDFAB81E9 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
@@ -230,6 +232,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		1590F4C3A5B5349C7F8D90192D9306A8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F5CC788C15FF8A12B954C0CB97615B7F /* LoginPresenter+LoginPresentationLogic.swift */,
+				D178B6BF12BB4804100B97D81F785C0B /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		15D5F0115B4CD96BED4189D85F67F671 /* iddogTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +258,16 @@
 				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		25B41A5342626AC66A451C05682A10F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BE34DAA063F80CF252407322025B643 /* LoginViewController+LoginDisplayLogic.swift */,
+				EE6B10BC22C6A417C3D067A604490650 /* LoginViewController+TextFieldDelegate.swift */,
+				1FF594494F12BB8AA41400DEE2FD02F6 /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C35D3C9502C6006105B5730588C57D9 /* Products */ = {
@@ -348,6 +369,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		6DA87B1146F783AA107482E927CF49C2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8C466E6B0281219DED8C4BC03299BBA8 /* LoginConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		735BC1AF397946E2C23A8C848577C147 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				785B14193ECFB5017CF513756A072A5D /* LoginWorker+LoginExternalCalls.swift */,
+				3685B385D3E7584C95BE4F1EDFAB81E9 /* LoginWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		762757B26BCDF28650475347149CEF86 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +393,14 @@
 				9D690359EF272D88ECF5F50C673F12BE /* ComponentConstants.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		816658A151C50C0AACD7EB776E009466 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CD25A2A482B32770786B786D58E64 /* LoginSceneFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		83D77B76746D4CFC24A327C2EECC6794 /* Constants */ = {
@@ -461,6 +507,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B823B9E9EC9F22E6CAC478F26E5C2886 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52B2D1A2241F09A87AF300C602E4622D /* LoginInteractor+LoginBusinessLogic.swift */,
+				54B269594EF24B14C4E0D1189CEB42C3 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		C21D712D24681BC6A96CB9CE066EC596 /* iddogUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +603,16 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		EC761F410CEA0EE34B18CF9EC3ACA75F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				498CFAB0A0602AE64674FB7F7E2AE2E5 /* LoginRouter+LoginDataPassing.swift */,
+				0C03478AB30FCF33F3C0F62E3EB5EC6A /* LoginRouter+LoginRoutingLogic.swift */,
+				E038F3CCCCF903CB75F6971190C3CE61 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		ED47E9D5854777A282C74F9FA794F8C4 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,68 +639,6 @@
 				E41AAA01F4E5BC2BAAB6A0EBA81D7F6A /* MainPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		6DA87B1146F783AA107482E927CF49C2 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				8C466E6B0281219DED8C4BC03299BBA8 /* LoginConstants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		B823B9E9EC9F22E6CAC478F26E5C2886 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				52B2D1A2241F09A87AF300C602E4622D /* LoginInteractor+LoginBusinessLogic.swift */,
-				54B269594EF24B14C4E0D1189CEB42C3 /* LoginInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		1590F4C3A5B5349C7F8D90192D9306A8 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				F5CC788C15FF8A12B954C0CB97615B7F /* LoginPresenter+LoginPresentationLogic.swift */,
-				D178B6BF12BB4804100B97D81F785C0B /* LoginPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		EC761F410CEA0EE34B18CF9EC3ACA75F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				498CFAB0A0602AE64674FB7F7E2AE2E5 /* LoginRouter+LoginDataPassing.swift */,
-				0C03478AB30FCF33F3C0F62E3EB5EC6A /* LoginRouter+LoginRoutingLogic.swift */,
-				E038F3CCCCF903CB75F6971190C3CE61 /* LoginRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		816658A151C50C0AACD7EB776E009466 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				1E2CD25A2A482B32770786B786D58E64 /* LoginSceneFactory.swift */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		25B41A5342626AC66A451C05682A10F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2BE34DAA063F80CF252407322025B643 /* LoginViewController+LoginDisplayLogic.swift */,
-				1FF594494F12BB8AA41400DEE2FD02F6 /* LoginViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		735BC1AF397946E2C23A8C848577C147 /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				785B14193ECFB5017CF513756A072A5D /* LoginWorker+LoginExternalCalls.swift */,
-				3685B385D3E7584C95BE4F1EDFAB81E9 /* LoginWorker.swift */,
-			);
-			path = Worker;
 			sourceTree = "<group>";
 		};
 		F6CC81C575D81D20C6E3737175324413 /* Endpoints */ = {
@@ -924,6 +927,7 @@
 				57389DBA3BC61864EB388B7F8E722749 /* LoginRouter.swift in Sources */,
 				2AD688C4C0E48881C13EA020F374BABF /* LoginSceneFactory.swift in Sources */,
 				220663271FC63D3C8F3BA72FBEAD0F61 /* LoginViewController+LoginDisplayLogic.swift in Sources */,
+				6A425B99EFE5E953A0B19B485B6BFB46 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				EFA8DFF0092FBC675F95CB0FA599AF58 /* LoginViewController.swift in Sources */,
 				D552E44540D046FE891A70500049C55F /* LoginWorker+LoginExternalCalls.swift in Sources */,
 				B8F892BFEC498A440AB548A28C377565 /* LoginWorker.swift in Sources */,
