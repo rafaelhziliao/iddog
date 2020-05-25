@@ -41,6 +41,9 @@ final class LoginViewController: UIViewController {
         textField.backgroundColor = R.color.appWhite()
         textField.keyboardType = .emailAddress
         textField.delegate = self
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
+        textField.spellCheckingType = .no
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
