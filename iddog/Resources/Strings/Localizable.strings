@@ -1,0 +1,21 @@
+//MARK: - Login Scene
+
+"typeYourEmail" = "Digite seu E-mail";
+"signUp" = "Cadastre-se";
+"email" = "E-mail";
+
+//MARK: - Error Messages
+
+"errorAlertDefaultTitle" = "Erro";
+"errorAlertDefaultAction" = "Ok";
+"notPossibleConnect" = "Falha durante a conexão com o serviço";
+"requestTimeOut" = "Por favor tente novamente";
+"invalidInput" = "Dado(s) inválidos";
+"somethingWrong" = "Oops! Algo deu errado…";
+
+//MARK: - Commom Messages
+
+"tryAgain" = "Tentar novamente";
+"cancel" = "Cancelar";
+
+

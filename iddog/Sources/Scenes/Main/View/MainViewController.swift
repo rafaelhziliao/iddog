@@ -1,23 +1,11 @@
 import UIKit
 
-protocol MainDisplayLogic: class {
-    func displayCategories()
-    func displayLogin()
-}
-
 final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
-    var router: RoutingLogic?
+    var router: MainRouterType?
 
-    private lazy var appNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = MainSceneConstants.appName
-        label.textColor = .white
-        label.font = FontHelper.font(
-            for: HelveticaNeue.boldItalic,
-            and: MainSceneConstants.appNameFontSize
-        )
-        label.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var appNameLabel: AppNameLabel = {
+        let label = AppNameLabel()
         return label
     }()
 
@@ -47,13 +35,8 @@ final class MainViewController: UIViewController {
         buildView()
     }
 
-    convenience init(
-        interactor: MainBusinessLogic?,
-        router: RoutingLogic
-    ) {
+    convenience init() {
         self.init(nibName: nil, bundle: nil)
-        buildView()
-        self.interactor = interactor
     }
 
     // MARK: View lifecycle
@@ -79,18 +62,7 @@ extension MainViewController: ViewCodable {
     }
 
     func additionalSetup() {
-        view.backgroundColor = .systemPurple
-    }
-
-}
-
-extension MainViewController: MainDisplayLogic {
-    func displayCategories() {
-        router?.routeToCategories()
-    }
-
-    func displayLogin() {
-        router?.routeToLogin()
+        view.backgroundColor = R.color.appPurple()
     }
 
 }
