@@ -2,12 +2,6 @@ import UIKit
 
 typealias LoginRouterType = (LoginRoutingLogic & LoginDataPassing)
 
-protocol LoginRoutingLogic {}
-
-protocol LoginDataPassing {
-    var dataStore: LoginDataStore? { get }
-}
-
 final class LoginRouter: RootSceneType {
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
@@ -17,7 +11,3 @@ final class LoginRouter: RootSceneType {
         self.window = window
     }
 }
-
-extension LoginRouter: LoginRoutingLogic {}
-
-extension LoginRouter: LoginDataPassing {}

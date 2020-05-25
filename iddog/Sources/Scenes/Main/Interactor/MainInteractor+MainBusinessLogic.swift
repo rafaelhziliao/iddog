@@ -1,17 +1,7 @@
-import UIKit
+import Foundation
 
 protocol MainBusinessLogic {
     func requestCredentials()
-}
-
-protocol MainDataStore {
-    var token: String { get set }
-}
-
-final class MainInteractor: MainDataStore {
-    var presenter: MainPresentationLogic?
-    var worker: ExternalServices?
-    var token: String = ""
 }
 
 extension MainInteractor: MainBusinessLogic {

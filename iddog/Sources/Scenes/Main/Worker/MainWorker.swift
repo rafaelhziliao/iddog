@@ -1,8 +1,6 @@
 import UIKit
 
-protocol LoginExternalServices {}
-
-final class LoginWorker {
+final class MainWorker {
     let network: NetworkProviderProtocol
     let credentialStorage: SecurityStorageProtocol
 
@@ -14,5 +12,3 @@ final class LoginWorker {
         self.credentialStorage = credentialStorage
     }
 }
-
-extension LoginWorker: LoginExternalServices {}

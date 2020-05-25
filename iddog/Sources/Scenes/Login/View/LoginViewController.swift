@@ -1,7 +1,5 @@
 import UIKit
 
-protocol LoginDisplayLogic: class {}
-
 final class LoginViewController: UIViewController {
     var interactor: LoginBusinessLogic?
     var router: LoginRouterType?
@@ -125,5 +123,3 @@ extension LoginViewController: ViewCodable {
         view.backgroundColor = R.color.appPurple()
     }
 }
-
-extension LoginViewController: LoginDisplayLogic {}

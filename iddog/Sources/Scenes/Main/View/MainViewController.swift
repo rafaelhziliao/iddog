@@ -1,10 +1,5 @@
 import UIKit
 
-protocol MainDisplayLogic: class {
-    func displayCategories()
-    func displayLogin()
-}
-
 final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
     var router: MainRouterType?
@@ -68,17 +63,6 @@ extension MainViewController: ViewCodable {
 
     func additionalSetup() {
         view.backgroundColor = R.color.appPurple()
-    }
-
-}
-
-extension MainViewController: MainDisplayLogic {
-    func displayCategories() {
-        router?.routeToCategories()
-    }
-
-    func displayLogin() {
-        router?.routeToLogin()
     }
 
 }
