@@ -26,6 +26,8 @@ final class LoginSceneFactory: RootSceneType {
         router.viewController = viewController
         router.dataStore = interactor
 
-        window.rootViewController = viewController
+        if let nav = window.rootViewController as? UINavigationController {
+            nav.setViewControllers([viewController], animated: true)
+        }
     }
 }

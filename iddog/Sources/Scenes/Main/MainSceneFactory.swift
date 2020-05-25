@@ -26,6 +26,7 @@ final class MainSceneFactory: RootSceneType {
         router.viewController = viewController
         router.dataStore = interactor
 
-        window.rootViewController = viewController
+        let navigation = UINavigationController(rootViewController: viewController)
+        window.rootViewController = navigation
     }
 }
