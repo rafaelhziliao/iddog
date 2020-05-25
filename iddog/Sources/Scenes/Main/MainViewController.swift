@@ -9,15 +9,8 @@ final class MainViewController: UIViewController {
     var interactor: MainBusinessLogic?
     var router: MainRouterType?
 
-    private lazy var appNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = MainSceneConstants.appName
-        label.textColor = .white
-        label.font = FontHelper.font(
-            for: HelveticaNeue.boldItalic,
-            and: MainSceneConstants.appNameFontSize
-        )
-        label.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var appNameLabel: AppNameLabel = {
+        let label = AppNameLabel()
         return label
     }()
 
@@ -55,7 +48,6 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildView()
         interactor?.requestCredentials()
     }
 }
@@ -75,7 +67,7 @@ extension MainViewController: ViewCodable {
     }
 
     func additionalSetup() {
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = R.color.appPurple()
     }
 
 }

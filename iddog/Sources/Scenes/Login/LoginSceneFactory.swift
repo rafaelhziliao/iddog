@@ -28,6 +28,7 @@ final class LoginSceneFactory: RootSceneType {
 
         if let nav = window.rootViewController as? UINavigationController {
             nav.setViewControllers([viewController], animated: true)
+            nav.isNavigationBarHidden = true
         }
     }
 }
