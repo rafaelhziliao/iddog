@@ -1,6 +1,6 @@
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, AlertWithError {
     var interactor: LoginBusinessLogic?
     var router: LoginRouterType?
 
@@ -31,7 +31,7 @@ final class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var emailTextField: UITextField = {
+    lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = R.string.localizable.email()
         textField.font = FontHelper.font(
@@ -63,6 +63,11 @@ final class LoginViewController: UIViewController {
             R.string.localizable.signUp(),
             for: .normal
         )
+        button.addTarget(
+            self,
+            action: #selector(didTapSignUpButton),
+            for: .touchUpInside
+        )
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -90,6 +95,12 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
+    }
+}
+
+private extension LoginViewController {
+    @objc func didTapSignUpButton(sender: Any) {
+        interactor?.signUp(with: emailTextField.text)
     }
 }
 

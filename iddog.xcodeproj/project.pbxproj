@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7BDC96F20E81037456CA151EC316C31 /* AlertWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */; };
 		B5655D4F43C8585C496C46DC1278F0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E9C69DBFD98BDBD832F0F2B8BE83E /* AppDelegate.swift */; };
 		50CF5E90FE78BD47CCF22EA75BF4DA56 /* AppNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B7EB554C156394C7779BC63F507C7 /* AppNameLabel.swift */; };
 		E6A2327FDACE0A316C794726BD6F6377 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C2D7B4552D52363AD7F09B6833E96 /* Array+Extensions.swift */; };
@@ -63,6 +64,7 @@
 		B0013A3BA253C3BA3A2B143C90E6D980 /* Pods_iddogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */; };
 		10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */; };
 		A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */; };
+		DAD9A424A65CE96AFDC6EB428AD64027 /* RouterShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */; };
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
 		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
@@ -95,6 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWithError.swift; sourceTree = "<group>"; };
 		5C9E9C69DBFD98BDBD832F0F2B8BE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8B7EB554C156394C7779BC63F507C7 /* AppNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameLabel.swift; sourceTree = "<group>"; };
 		D30C2D7B4552D52363AD7F09B6833E96 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iddogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSceneType.swift; sourceTree = "<group>"; };
+		E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterShowAlert.swift; sourceTree = "<group>"; };
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
 		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
@@ -253,8 +257,10 @@
 		18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */,
 				E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */,
 				0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */,
+				E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */,
 				648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */,
 			);
 			path = Protocols;
@@ -900,6 +906,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BDC96F20E81037456CA151EC316C31 /* AlertWithError.swift in Sources */,
 				B5655D4F43C8585C496C46DC1278F0FD /* AppDelegate.swift in Sources */,
 				50CF5E90FE78BD47CCF22EA75BF4DA56 /* AppNameLabel.swift in Sources */,
 				E6A2327FDACE0A316C794726BD6F6377 /* Array+Extensions.swift in Sources */,
@@ -949,6 +956,7 @@
 				3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */,
 				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,
 				A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */,
+				DAD9A424A65CE96AFDC6EB428AD64027 /* RouterShowAlert.swift in Sources */,
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
 				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,

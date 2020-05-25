@@ -1,5 +1,16 @@
-import Foundation
+import UIKit
 
-protocol LoginRoutingLogic {}
+protocol LoginRoutingLogic {
+    func routeToAlert(_ alert: UIAlertController)
+    func dismiss()
+}
 
-extension LoginRouter: LoginRoutingLogic {}
+extension LoginRouter: LoginRoutingLogic {
+    func routeToAlert(_ alert: UIAlertController) {
+        showAlert(alert)
+    }
+
+    func dismiss() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
+}

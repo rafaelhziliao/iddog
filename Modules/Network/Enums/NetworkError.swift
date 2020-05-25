@@ -15,3 +15,18 @@ public enum NetworkError: Error {
         self = .custom(description: description)
     }
 }
+
+extension NetworkError {
+    func messageToPresentToUser() -> String {
+        switch self {
+        case let .custom(description):
+            return description
+        case .unknown, .parseError, .noJSONData, .badRequest, .outDated:
+            return R.string.localizable.notPossibleConnect()
+        case .requestTimeout, .noNetwork:
+            return R.string.localizable.requestTimeOut()
+        case .unauthorized:
+            return R.string.localizable.invalidInput()
+        }
+    }
+}
