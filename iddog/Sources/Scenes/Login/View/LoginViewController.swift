@@ -88,13 +88,13 @@ final class LoginViewController: UIViewController, AlertWithError {
 
     convenience init() {
         self.init(nibName: nil, bundle: nil)
+        buildView()
     }
 
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildView()
     }
 }
 

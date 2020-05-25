@@ -7,7 +7,9 @@ protocol LoginDisplayLogic: class {
 
 extension LoginViewController: LoginDisplayLogic {
     func displayCategories(with user: UserProtocol) {
-
+        DispatchQueue.main.async {
+            self.router?.routeToCategories()
+        }
     }
 
     func displaySignUpError(_ error: NetworkError) {
