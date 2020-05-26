@@ -2,6 +2,7 @@ import Foundation
 
 protocol CategoriesBusinessLogic {
     func logout()
+    func fetchCategories()
 }
 
 extension CategoriesInteractor: CategoriesBusinessLogic {
@@ -9,4 +10,11 @@ extension CategoriesInteractor: CategoriesBusinessLogic {
         worker?.clearCredentials()
         presenter?.presentLogin()
     }
+
+    func fetchCategories() {
+        worker?.fecthCategories(result: { [weak self] categories in
+            self?.presenter?.presentCategories(categories)
+        })
+    }
+
 }

@@ -3,6 +3,7 @@ import UIKit
 protocol CategoriesDisplayLogic: class {
     func displayLogin()
     func displayLogoutConfirmation()
+    func displayCategories(_ categories: CategoriesModel)
 }
 
 extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
@@ -33,5 +34,9 @@ extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
         )
 
         router?.routeToLogoutConfirmation(alert)
+    }
+
+    func displayCategories(_ categories: CategoriesModel) {
+        self.categories = categories
     }
 }

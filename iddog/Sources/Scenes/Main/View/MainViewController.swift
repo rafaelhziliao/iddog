@@ -32,7 +32,6 @@ final class MainViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        buildView()
     }
 
     convenience init() {
@@ -43,6 +42,13 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildView()
+        fetchCredentials()
+    }
+}
+
+private extension MainViewController {
+    func fetchCredentials() {
         interactor?.requestCredentials()
     }
 }

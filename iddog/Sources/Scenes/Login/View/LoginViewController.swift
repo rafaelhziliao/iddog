@@ -83,18 +83,17 @@ final class LoginViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        buildView()
     }
 
     convenience init() {
         self.init(nibName: nil, bundle: nil)
-        buildView()
     }
 
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildView()
     }
 }
 

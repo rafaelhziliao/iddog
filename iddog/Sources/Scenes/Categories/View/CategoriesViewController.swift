@@ -14,6 +14,23 @@ final class CategoriesViewController: UIViewController {
         return button
     }()
 
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .singleLine
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = R.color.appLightGray()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+
+    var categories: CategoriesModel = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     // MARK: Object lifecycle
 
     override init(
@@ -25,24 +42,24 @@ final class CategoriesViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        buildView()
     }
 
     convenience init() {
         self.init(nibName: nil, bundle: nil)
-        buildView()
     }
 
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildView()
+        fetchCategories()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.rightBarButtonItem = logoutBarButtonItem
-        title = "TESTE TITLE"
+        title = R.string.localizable.categoriesScreenTitle()
     }
 }
 
@@ -50,16 +67,24 @@ private extension CategoriesViewController {
     @objc func didTapLogoutButton() {
         displayLogoutConfirmation()
     }
+
+    func fetchCategories() {
+        interactor?.fetchCategories()
+    }
 }
 
 extension CategoriesViewController: ViewCodable {
     func buildViewHierarchy() {
+        view.addSubview(tableView)
     }
 
     func setupConstraints() {
+        tableView.safeAreaTop(safeAreaView: view)
+        tableView.rightConstraint(parentView: view)
+        tableView.leftConstraint(parentView: view)
+        tableView.bottomConstraint(parentView: view)
     }
 
     func additionalSetup() {
     }
-
 }

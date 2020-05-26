@@ -22,9 +22,13 @@
 		C23619E8961C5B3A216382122993E4CF /* CategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5339250987C88502710A935007967 /* CategoriesRouter.swift */; };
 		CADBD5C660388E1746340F0005DD9371 /* CategoriesSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC76AD0E2335AD1BEB96FBD98EF8BA /* CategoriesSceneFactory.swift */; };
 		30102D261DB1C8B53660F6EEE18A67D8 /* CategoriesViewController+CategoriesDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3C7FCF73DCD1EC3C40F7F63213292 /* CategoriesViewController+CategoriesDisplayLogic.swift */; };
+		1B102FE2F80DBEC9060463DB66FA8BD4 /* CategoriesViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820386D96C31777D2A92A09B83970A21 /* CategoriesViewController+TableViewDataSource.swift */; };
+		B2356F9B20DA19BD69F037DFAE9AA118 /* CategoriesViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4296847BC6F40072B41DE39084207F /* CategoriesViewController+TableViewDelegate.swift */; };
 		5AC6740C81FBD02DCE8116FFE8F1D970 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196683179F7381E0A2DD2388236EE6AD /* CategoriesViewController.swift */; };
 		235CB217EF09E4FD6197A2A8765ED93B /* CategoriesWorker+CategoriesExternalCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC068CEB884817EE7EFB53A6D5ADC01 /* CategoriesWorker+CategoriesExternalCalls.swift */; };
 		D9C88672BFB70425FCBAF244D7D0CFA0 /* CategoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3BFC8DAF3AFCB90468063A0DA6CAF /* CategoriesWorker.swift */; };
+		AD202AF75F4465F06CB91ED6930AA62A /* CategoryCaleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608BE2B8B5D2B43494FCB0E7089D64A /* CategoryCaleryModel.swift */; };
+		076A107E0959A79B382A9DAFF3AC05B7 /* CategoryGaleryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */; };
 		3D25EE70C271C34E21754407F2FD0D37 /* CategoryImagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD66599E86C99987D45BC09EC722B86C /* CategoryImagesEndpoint.swift */; };
 		33DC153BAB178B9F0A758CCF7F409FCA /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C81860F135DCE921CE11EF160557B /* CategoryModel.swift */; };
 		D235B8CFAA7835C6F41A03232BD1C824 /* CategoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */; };
@@ -126,9 +130,13 @@
 		49B5339250987C88502710A935007967 /* CategoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
 		44AC76AD0E2335AD1BEB96FBD98EF8BA /* CategoriesSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSceneFactory.swift; sourceTree = "<group>"; };
 		CEF3C7FCF73DCD1EC3C40F7F63213292 /* CategoriesViewController+CategoriesDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesViewController+CategoriesDisplayLogic.swift"; sourceTree = "<group>"; };
+		820386D96C31777D2A92A09B83970A21 /* CategoriesViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
+		DB4296847BC6F40072B41DE39084207F /* CategoriesViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		196683179F7381E0A2DD2388236EE6AD /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		5AC068CEB884817EE7EFB53A6D5ADC01 /* CategoriesWorker+CategoriesExternalCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesWorker+CategoriesExternalCalls.swift"; sourceTree = "<group>"; };
 		40B3BFC8DAF3AFCB90468063A0DA6CAF /* CategoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWorker.swift; sourceTree = "<group>"; };
+		F608BE2B8B5D2B43494FCB0E7089D64A /* CategoryCaleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCaleryModel.swift; sourceTree = "<group>"; };
+		3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGaleryProtocol.swift; sourceTree = "<group>"; };
 		FD66599E86C99987D45BC09EC722B86C /* CategoryImagesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImagesEndpoint.swift; sourceTree = "<group>"; };
 		868C81860F135DCE921CE11EF160557B /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProtocol.swift; sourceTree = "<group>"; };
@@ -309,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				CEF3C7FCF73DCD1EC3C40F7F63213292 /* CategoriesViewController+CategoriesDisplayLogic.swift */,
+				820386D96C31777D2A92A09B83970A21 /* CategoriesViewController+TableViewDataSource.swift */,
+				DB4296847BC6F40072B41DE39084207F /* CategoriesViewController+TableViewDelegate.swift */,
 				196683179F7381E0A2DD2388236EE6AD /* CategoriesViewController.swift */,
 			);
 			path = View;
@@ -498,6 +508,7 @@
 		92FDCB1BBA87C2E656843AEBED859666 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F608BE2B8B5D2B43494FCB0E7089D64A /* CategoryCaleryModel.swift */,
 				868C81860F135DCE921CE11EF160557B /* CategoryModel.swift */,
 				636C53435ADADB55C9DCB4D906540B89 /* CredendialsModel.swift */,
 				D7A6B32D67C1C571811894764DBE7123 /* UserModel.swift */,
@@ -717,6 +728,7 @@
 		F1E29D6E598FD6C0CB91ACBE32791281 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */,
 				7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */,
 				A203503D8B2A731609828777C7E9BD0D /* CredentialsProtocol.swift */,
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
@@ -1015,9 +1027,13 @@
 				C23619E8961C5B3A216382122993E4CF /* CategoriesRouter.swift in Sources */,
 				CADBD5C660388E1746340F0005DD9371 /* CategoriesSceneFactory.swift in Sources */,
 				30102D261DB1C8B53660F6EEE18A67D8 /* CategoriesViewController+CategoriesDisplayLogic.swift in Sources */,
+				1B102FE2F80DBEC9060463DB66FA8BD4 /* CategoriesViewController+TableViewDataSource.swift in Sources */,
+				B2356F9B20DA19BD69F037DFAE9AA118 /* CategoriesViewController+TableViewDelegate.swift in Sources */,
 				5AC6740C81FBD02DCE8116FFE8F1D970 /* CategoriesViewController.swift in Sources */,
 				235CB217EF09E4FD6197A2A8765ED93B /* CategoriesWorker+CategoriesExternalCalls.swift in Sources */,
 				D9C88672BFB70425FCBAF244D7D0CFA0 /* CategoriesWorker.swift in Sources */,
+				AD202AF75F4465F06CB91ED6930AA62A /* CategoryCaleryModel.swift in Sources */,
+				076A107E0959A79B382A9DAFF3AC05B7 /* CategoryGaleryProtocol.swift in Sources */,
 				3D25EE70C271C34E21754407F2FD0D37 /* CategoryImagesEndpoint.swift in Sources */,
 				33DC153BAB178B9F0A758CCF7F409FCA /* CategoryModel.swift in Sources */,
 				D235B8CFAA7835C6F41A03232BD1C824 /* CategoryProtocol.swift in Sources */,
