@@ -4,23 +4,13 @@ final class CategoriesViewController: UIViewController {
     var interactor: CategoriesBusinessLogic?
     var router: CategoriesRouterType?
 
-    private lazy var logoutButton: UIButton = {
-        let button = UIButton()
-        button.setTitle(
-            "Logout",
-            for: .normal
+    private lazy var logoutBarButtonItem: UIBarButtonItem = {
+        let button = UIBarButtonItem(
+            image: R.image.ic_sair()?.withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(didTapLogoutButton)
         )
-        button.setTitleColor(
-            R.color.appWhite(),
-            for: .normal
-        )
-        button.addTarget(
-            self,
-            action: #selector(didTapLogoutButton),
-            for: .touchUpInside
-        )
-        button.backgroundColor = R.color.appGreen()
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
@@ -48,6 +38,12 @@ final class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
+        title = "TESTE TITLE"
+    }
 }
 
 private extension CategoriesViewController {
@@ -58,17 +54,12 @@ private extension CategoriesViewController {
 
 extension CategoriesViewController: ViewCodable {
     func buildViewHierarchy() {
-        view.addSubview(logoutButton)
     }
 
     func setupConstraints() {
-        logoutButton.centerXConstraint(parentView: view)
-        logoutButton.centerYConstraint(parentView: view)
-        logoutButton.widthConstraint(constant: 288)
     }
 
     func additionalSetup() {
-        view.backgroundColor = R.color.appPurple()
     }
 
 }
