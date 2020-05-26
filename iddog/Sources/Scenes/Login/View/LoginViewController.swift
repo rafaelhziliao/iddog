@@ -1,6 +1,6 @@
 import UIKit
 
-final class LoginViewController: UIViewController, AlertWithError {
+final class LoginViewController: UIViewController {
     var interactor: LoginBusinessLogic?
     var router: LoginRouterType?
 

@@ -48,7 +48,7 @@ final class CategoriesViewController: UIViewController {
 
 private extension CategoriesViewController {
     @objc func didTapLogoutButton() {
-        interactor?.logout()
+        displayLogoutConfirmation()
     }
 }
 

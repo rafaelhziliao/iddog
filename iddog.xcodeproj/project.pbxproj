@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7BDC96F20E81037456CA151EC316C31 /* AlertWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */; };
+		9E3560054BF8BC14689264D2F68C930B /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734F075183517CFC5F03D53ACD1FA85 /* Alertable.swift */; };
 		B5655D4F43C8585C496C46DC1278F0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9E9C69DBFD98BDBD832F0F2B8BE83E /* AppDelegate.swift */; };
 		50CF5E90FE78BD47CCF22EA75BF4DA56 /* AppNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B7EB554C156394C7779BC63F507C7 /* AppNameLabel.swift */; };
 		51069C07F7384F8EB6DAD3CA0A86D614 /* AppearanceCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C561D88244FFCE6F3AFCBFFD499920E8 /* AppearanceCustomization.swift */; };
@@ -110,7 +110,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWithError.swift; sourceTree = "<group>"; };
+		F734F075183517CFC5F03D53ACD1FA85 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		5C9E9C69DBFD98BDBD832F0F2B8BE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8B7EB554C156394C7779BC63F507C7 /* AppNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameLabel.swift; sourceTree = "<group>"; };
 		C561D88244FFCE6F3AFCBFFD499920E8 /* AppearanceCustomization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCustomization.swift; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 		18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				FB26FC5EAD4060FB5564796F50BB5277 /* AlertWithError.swift */,
+				F734F075183517CFC5F03D53ACD1FA85 /* Alertable.swift */,
 				E64B3031394E9C4A2D8BF3FB9C3C7B0B /* CustomFont.swift */,
 				0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */,
 				E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */,
@@ -1001,7 +1001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BDC96F20E81037456CA151EC316C31 /* AlertWithError.swift in Sources */,
+				9E3560054BF8BC14689264D2F68C930B /* Alertable.swift in Sources */,
 				B5655D4F43C8585C496C46DC1278F0FD /* AppDelegate.swift in Sources */,
 				50CF5E90FE78BD47CCF22EA75BF4DA56 /* AppNameLabel.swift in Sources */,
 				51069C07F7384F8EB6DAD3CA0A86D614 /* AppearanceCustomization.swift in Sources */,
