@@ -7,7 +7,7 @@ protocol MainPresentationLogic {
 
 extension MainPresenter: MainPresentationLogic {
     func presentCategories() {
-
+        viewController?.displayCategories()
     }
 
     func presentLogin() {

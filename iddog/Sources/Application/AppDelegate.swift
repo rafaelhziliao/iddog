@@ -17,9 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        // Override point for customization after application launch.
         mainScene.make()
         window?.makeKeyAndVisible()
+
+        AppearanceCustomization(
+            navBarTitleTextAttributes: R.color.appWhite(),
+            navBarLargeTitleTextAttributes: R.color.appWhite(),
+            navBarBackgroudColor: R.color.appPurple(),
+            alertControllerTintColor: R.color.appPurple()
+        ).apply()
+
         return true
     }
 }

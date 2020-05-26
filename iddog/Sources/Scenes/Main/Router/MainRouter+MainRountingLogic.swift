@@ -6,7 +6,10 @@ protocol MainRoutingLogic {
 }
 
 extension MainRouter: MainRoutingLogic {
-    func routeToCategories() {}
+    func routeToCategories() {
+        let categoriesScene = CategoriesSceneFactory(window: window)
+        categoriesScene.make()
+    }
 
     func routeToLogin() {
         let loginScene = LoginSceneFactory(window: window)

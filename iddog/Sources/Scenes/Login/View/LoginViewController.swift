@@ -1,6 +1,6 @@
 import UIKit
 
-final class LoginViewController: UIViewController, AlertWithError {
+final class LoginViewController: UIViewController {
     var interactor: LoginBusinessLogic?
     var router: LoginRouterType?
 
@@ -83,7 +83,6 @@ final class LoginViewController: UIViewController, AlertWithError {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        buildView()
     }
 
     convenience init() {

@@ -1,9 +1,9 @@
 import UIKit
 
-protocol AlertWithError {
+protocol Alertable {
     func alertWithError(_ error: NetworkError) -> UIAlertController
 
-    func alertWithError(
+    func alertWithActions(
         title: String,
         message: String,
         actions: [String]?,
@@ -17,18 +17,22 @@ protocol AlertWithError {
     ) -> UIAlertController
 }
 
-extension AlertWithError {
+extension Alertable {
 
     func alertWithError(_ error: NetworkError) -> UIAlertController {
         let title = R.string.localizable.errorAlertDefaultTitle()
         let message = error.messageToPresentToUser()
         let actionButton = R.string.localizable.errorAlertDefaultAction()
 
-        return alertWithError(title: title, message: message, actions: [actionButton])
+        return alertWithActions(
+            title: title,
+            message: message,
+            actions: [actionButton]
+        )
     }
 
     //swiftlint:disable:next function_body_length
-    func alertWithError(
+    func alertWithActions(
         title: String,
         message: String,
         actions: [String]?,
@@ -90,7 +94,7 @@ extension AlertWithError {
             R.string.localizable.tryAgain(),
             R.string.localizable.cancel()
         ]
-        let alert = alertWithError(
+        let alert = alertWithActions(
             title: R.string.localizable.somethingWrong(),
             message: error.messageToPresentToUser(),
             actions: actions,

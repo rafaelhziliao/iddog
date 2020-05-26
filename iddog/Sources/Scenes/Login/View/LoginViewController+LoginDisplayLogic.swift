@@ -5,9 +5,11 @@ protocol LoginDisplayLogic: class {
     func displaySignUpError(_ error: NetworkError)
 }
 
-extension LoginViewController: LoginDisplayLogic {
+extension LoginViewController: LoginDisplayLogic, Alertable {
     func displayCategories(with user: UserProtocol) {
-
+        DispatchQueue.main.async {
+            self.router?.routeToCategories()
+        }
     }
 
     func displaySignUpError(_ error: NetworkError) {
