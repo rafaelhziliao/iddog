@@ -59,7 +59,6 @@ final class CategoriesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationItem.rightBarButtonItem = logoutBarButtonItem
-        title = R.string.localizable.categoriesScreenTitle()
     }
 }
 
@@ -86,5 +85,6 @@ extension CategoriesViewController: ViewCodable {
     }
 
     func additionalSetup() {
+        title = R.string.localizable.categoriesScreenTitle()
     }
 }
