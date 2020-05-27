@@ -1,6 +1,6 @@
 import UIKit
 
-final class GaleryWorker {
+final class GalleryWorker {
     let network: NetworkProviderProtocol
     let credentialStorage: SecurityStorageProtocol
 

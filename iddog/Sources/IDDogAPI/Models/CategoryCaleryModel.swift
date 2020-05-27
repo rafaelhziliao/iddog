@@ -1,11 +1,11 @@
 import Foundation
 
-struct CategoryGaleryModel: CategoryGaleryProtocol {
+struct CategoryGalleryModel: CategoryGalleryProtocol {
     let name: String
     let list: [URL]
 }
 
-extension CategoryGaleryModel: Decodable {
+extension CategoryGalleryModel: Decodable {
     enum CodingKeys: String, CodingKey {
         case name = "category"
         case list

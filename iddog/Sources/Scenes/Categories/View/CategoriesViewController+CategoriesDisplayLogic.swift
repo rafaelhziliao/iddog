@@ -4,7 +4,7 @@ protocol CategoriesDisplayLogic: class {
     func displayLogin()
     func displayLogoutConfirmation()
     func displayCategories(_ categories: CategoriesModel)
-    func displayCategoryGalery()
+    func displayCategoryGallery()
 }
 
 extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
@@ -42,7 +42,7 @@ extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
         self.categories = categories
     }
 
-    func displayCategoryGalery() {
-        router?.routeToCategoryGalery()
+    func displayCategoryGallery() {
+        router?.routeToCategoryGallery()
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-final class GalerySceneFactory {
+final class GallerySceneFactory {
     private let categoryDataStore: CategoriesDataStore
     weak var sourceViewController: UIViewController?
 
@@ -13,12 +13,12 @@ final class GalerySceneFactory {
     }
 
     func make() {
-        let viewController = GaleryViewController()
-        let interactor = GaleryInteractor()
-        let presenter = GaleryPresenter()
-        let router = GaleryRouter()
+        let viewController = GalleryViewController()
+        let interactor = GalleryInteractor()
+        let presenter = GalleryPresenter()
+        let router = GalleryRouter()
 
-        let worker = GaleryWorker(
+        let worker = GalleryWorker(
             network: URLSessionProvider(),
             credentialStorage: CredentialStorage()
         )
@@ -32,18 +32,18 @@ final class GalerySceneFactory {
         router.dataStore = interactor
 
         var destinationDS = viewController.router!.dataStore!
-        passDataToGalery(source: categoryDataStore, destination: &destinationDS)
-        navigateToGalery(source: sourceViewController, destination: viewController)
+        passDataToGallery(source: categoryDataStore, destination: &destinationDS)
+        navigateToGallery(source: sourceViewController, destination: viewController)
     }
 
-    func passDataToGalery(
+    func passDataToGallery(
         source: CategoriesDataStore,
-        destination: inout GaleryDataStore
+        destination: inout GalleryDataStore
     ) {
         destination.categoryName = source.categoryName
     }
 
-    func navigateToGalery(
+    func navigateToGallery(
         source: UIViewController?,
         destination: UIViewController
     ) {

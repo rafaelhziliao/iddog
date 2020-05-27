@@ -4,7 +4,7 @@ protocol CategoriesRoutingLogic {
     func routeToLogin()
     func routeToLogoutConfirmation(_ alert: UIAlertController)
     func dismissLogoutAlert()
-    func routeToCategoryGalery()
+    func routeToCategoryGallery()
 }
 
 extension CategoriesRouter: CategoriesRoutingLogic {
@@ -21,12 +21,12 @@ extension CategoriesRouter: CategoriesRoutingLogic {
         viewController?.dismiss(animated: true, completion: nil)
     }
 
-    func routeToCategoryGalery() {
-        let galeryScene = GalerySceneFactory(
+    func routeToCategoryGallery() {
+        let galleryScene = GallerySceneFactory(
             sourceViewController: viewController,
             categoryDataStore: dataStore!
         )
-        galeryScene.make()
+        galleryScene.make()
     }
 
 }

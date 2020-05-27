@@ -1,8 +1,8 @@
 import UIKit
 
-final class GaleryViewController: UIViewController {
-    var interactor: GaleryBusinessLogic?
-    var router: GaleryRouterType?
+final class GalleryViewController: UIViewController {
+    var interactor: GalleryBusinessLogic?
+    var router: GalleryRouterType?
 
     // MARK: Object lifecycle
 
@@ -29,7 +29,7 @@ final class GaleryViewController: UIViewController {
     }
 }
 
-extension GaleryViewController: ViewCodable {
+extension GalleryViewController: ViewCodable {
     func buildViewHierarchy() {}
 
     func setupConstraints() {}
