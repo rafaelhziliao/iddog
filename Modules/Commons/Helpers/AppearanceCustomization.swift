@@ -4,17 +4,20 @@ public class AppearanceCustomization {
     let navBarTitleTextAttributes: UIColor?
     let navBarLargeTitleTextAttributes: UIColor?
     let navBarBackgroudColor: UIColor?
+    let navBarTintColor: UIColor?
     let alertControllerTintColor: UIColor?
 
     public init(
         navBarTitleTextAttributes: UIColor? = nil,
         navBarLargeTitleTextAttributes: UIColor? = nil,
         navBarBackgroudColor: UIColor? = nil,
+        navBarTintColor: UIColor? = nil,
         alertControllerTintColor: UIColor? = nil
     ) {
         self.navBarTitleTextAttributes = navBarTitleTextAttributes
         self.navBarLargeTitleTextAttributes = navBarLargeTitleTextAttributes
         self.navBarBackgroudColor = navBarBackgroudColor
+        self.navBarTintColor = navBarTintColor
         self.alertControllerTintColor = alertControllerTintColor
     }
 
@@ -32,7 +35,7 @@ public class AppearanceCustomization {
     }
 
     private func navigationBarIOSLowerThan13() {
-        UINavigationBar.appearance().barTintColor = navBarBackgroudColor
+        UINavigationBar.appearance().barTintColor = navBarTintColor ?? .clear
         UINavigationBar.appearance().tintColor = navBarTitleTextAttributes
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [
@@ -42,6 +45,7 @@ public class AppearanceCustomization {
 
     @available(iOS 13.0, *)
     private func navigationBarIOS13() {
+        UINavigationBar.appearance().tintColor = navBarTintColor ?? .clear
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.titleTextAttributes = [

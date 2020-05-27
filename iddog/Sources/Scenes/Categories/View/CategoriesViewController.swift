@@ -62,13 +62,17 @@ final class CategoriesViewController: UIViewController {
     }
 }
 
-private extension CategoriesViewController {
+extension CategoriesViewController {
     @objc func didTapLogoutButton() {
         displayLogoutConfirmation()
     }
 
     func fetchCategories() {
         interactor?.fetchCategories()
+    }
+
+    func sendCategoryNameToDataStore(_ name: String) {
+        interactor?.setCategoryNameOnDataStore(name)
     }
 }
 

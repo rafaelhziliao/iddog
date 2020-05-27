@@ -3,6 +3,7 @@ import Foundation
 protocol CategoriesPresentationLogic {
     func presentLogin()
     func presentCategories(_ categories: CategoriesModel)
+    func presentCategoryGalery()
 }
 
 extension CategoriesPresenter: CategoriesPresentationLogic {
@@ -13,4 +14,9 @@ extension CategoriesPresenter: CategoriesPresentationLogic {
     func presentCategories(_ categories: CategoriesModel) {
         viewController?.displayCategories(categories)
     }
+
+    func presentCategoryGalery() {
+        viewController?.displayCategoryGalery()
+    }
+
 }

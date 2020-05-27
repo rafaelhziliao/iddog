@@ -4,6 +4,7 @@ protocol CategoriesDisplayLogic: class {
     func displayLogin()
     func displayLogoutConfirmation()
     func displayCategories(_ categories: CategoriesModel)
+    func displayCategoryGalery()
 }
 
 extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
@@ -37,6 +38,11 @@ extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
     }
 
     func displayCategories(_ categories: CategoriesModel) {
+        //didSet property observer
         self.categories = categories
+    }
+
+    func displayCategoryGalery() {
+        router?.routeToCategoryGalery()
     }
 }
