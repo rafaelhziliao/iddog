@@ -11,6 +11,8 @@ final class GalleryViewController: UIViewController {
         return imageView
     }()
 
+    var galleryData: CategoryGalleryProtocol?
+
     // MARK: Object lifecycle
 
     override init(
@@ -33,9 +35,9 @@ final class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
-
-        let url = URL(string: "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg")!
-        interactor?.downloadImage(from: url)
+        interactor?.getLinkList()
+//        let url = URL(string: "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg")!
+//        interactor?.downloadImage(from: url)
     }
 }
 
