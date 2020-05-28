@@ -20,7 +20,8 @@ final class GallerySceneFactory {
 
         let worker = GalleryWorker(
             network: URLSessionProvider(),
-            credentialStorage: CredentialStorage()
+            credentialStorage: CredentialStorage(),
+            imageLoaderService: NukeImageLoaderProvider()
         )
 
         viewController.interactor = interactor
