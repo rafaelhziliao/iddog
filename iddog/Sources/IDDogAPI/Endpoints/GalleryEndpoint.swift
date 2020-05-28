@@ -1,6 +1,6 @@
 import Foundation
 
-struct CategoryImagesEndpoint: EndpointProtocol {
+struct GalleryEndpoint: EndpointProtocol {
     var path: String {
         return "/feed"
     }
