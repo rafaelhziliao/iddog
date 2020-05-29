@@ -115,7 +115,6 @@
 		CE0857E415EF44104395B76D64D5F2EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6B32D67C1C571811894764DBE7123 /* UserModel.swift */; };
 		A2692F2886315A4D6744CCEC2632B1F3 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */; };
 		8E5325152CBEE733819958AA96DAE15B /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */; };
-		6779F565E27A3FDA967ABDFF99D8A87E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1444612158A8F2658BEE00DB73F71952 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,7 +250,6 @@
 		D7A6B32D67C1C571811894764DBE7123 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		648E680A86CF931813E0A9FBBBBF54E4 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
-		1444612158A8F2658BEE00DB73F71952 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BE207F3EF7AD794CC026E166D72C67C /* iddog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iddog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		710A87040F43C139EFD6A0C484AE302A /* iddogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iddogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58245178D1F5546425B07F3283A7250 /* iddogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iddogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,6 +496,25 @@
 				39B7D05A046876AA27E4E7CBA5F52077 /* Main */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		51FA8DDFF0B76B09F1163B0B0ECF8777 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9796B360B8E88EC06BF4E7B90CE52A8D /* GalleryCollectionViewCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		53ACC657CAB35AF129D7412AC5F3DF55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C70E944C1D50EA46C3DA008CF96B858B /* Interactor */,
+				51FA8DDFF0B76B09F1163B0B0ECF8777 /* Presenter */,
+				D9CC40711331F5FD2AD41A5C21D61534 /* View */,
+				EBB3BB18D955A045437CA2DCAACB7686 /* Worker */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5841851CC56391426E65A79DF02BB7D5 /* Screens */ = {
@@ -767,6 +784,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C70E944C1D50EA46C3DA008CF96B858B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				918C3B24FCCFC61A8075825BF016B14A /* GalleryCollectionViewCellInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		CF0BAFE2D3192A6F9ADE431C51DCD695 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +823,14 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		D9CC40711331F5FD2AD41A5C21D61534 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC8A60F35403639B145334A2147504A0 /* GalleryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D9FDAA8282F8615036C1247EB564AE83 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,7 +846,6 @@
 				762757B26BCDF28650475347149CEF86 /* Components */,
 				A2F7A58FDB9B10EA0D6B366A28509E50 /* IDDogAPI */,
 				51207C8C9FE1335F06DDD32611BA57E3 /* Scenes */,
-				1444612158A8F2658BEE00DB73F71952 /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -825,6 +857,14 @@
 				1D2386E2448C7BB688A724822A1B687E /* MainInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EBB3BB18D955A045437CA2DCAACB7686 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				AE4300FF3BE0CB51DEA00D602D2FECA8 /* GalleryCollectionViewCellWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		EC761F410CEA0EE34B18CF9EC3ACA75F /* Router */ = {
@@ -864,49 +904,6 @@
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		53ACC657CAB35AF129D7412AC5F3DF55 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				C70E944C1D50EA46C3DA008CF96B858B /* Interactor */,
-				51FA8DDFF0B76B09F1163B0B0ECF8777 /* Presenter */,
-				D9CC40711331F5FD2AD41A5C21D61534 /* View */,
-				EBB3BB18D955A045437CA2DCAACB7686 /* Worker */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		D9CC40711331F5FD2AD41A5C21D61534 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FC8A60F35403639B145334A2147504A0 /* GalleryCollectionViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C70E944C1D50EA46C3DA008CF96B858B /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				918C3B24FCCFC61A8075825BF016B14A /* GalleryCollectionViewCellInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		51FA8DDFF0B76B09F1163B0B0ECF8777 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				9796B360B8E88EC06BF4E7B90CE52A8D /* GalleryCollectionViewCellPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		EBB3BB18D955A045437CA2DCAACB7686 /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				AE4300FF3BE0CB51DEA00D602D2FECA8 /* GalleryCollectionViewCellWorker.swift */,
-			);
-			path = Worker;
 			sourceTree = "<group>";
 		};
 		F5D03E07B2452D55639F0088D22093E7 /* Presenter */ = {
@@ -1300,7 +1297,6 @@
 				CE0857E415EF44104395B76D64D5F2EC /* UserModel.swift in Sources */,
 				A2692F2886315A4D6744CCEC2632B1F3 /* UserProtocol.swift in Sources */,
 				8E5325152CBEE733819958AA96DAE15B /* ViewCodable.swift in Sources */,
-				6779F565E27A3FDA967ABDFF99D8A87E /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
