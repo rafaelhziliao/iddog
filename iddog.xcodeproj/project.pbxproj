@@ -100,6 +100,7 @@
 		CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */; };
 		12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */; };
 		FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */; };
+		792F69EFA484A9A7F4AB88C5048AF6E7 /* PhotoDetailSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */; };
 		F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */; };
 		9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */; };
 		3B17A8E0C6634C1CE8ED49F0893CE8D3 /* Pods_iddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */; };
@@ -235,6 +236,7 @@
 		B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeImageLoaderProvider.swift; sourceTree = "<group>"; };
 		89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailInteractor.swift; sourceTree = "<group>"; };
 		7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresenter.swift; sourceTree = "<group>"; };
+		B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailSceneFactory.swift; sourceTree = "<group>"; };
 		3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailWorker.swift; sourceTree = "<group>"; };
 		94E07D0D9FF8A7CDF5ED20A23DB1ADEE /* Pods-iddog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddog.debug.xcconfig"; path = "Target Support Files/Pods-iddog/Pods-iddog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -415,6 +417,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		2C35D3C9502C6006105B5730588C57D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +474,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		42EBC9A5B367663394E2356F27B39BCA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +492,14 @@
 				0480197DE0800B1F66D10580D585C4ED /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		437D4B8E0E5D22C7C78721676A4C602B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		46CCA0FB5664A24C36908F45C37CCB3A /* Protocols */ = {
@@ -729,6 +754,19 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		AF9BD26C6DCD6FD55C3BEBC6FB71E006 /* Photo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D3BF1B82F3CADB024B5ACEAD2757568A /* Factory */,
+				4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */,
+				EFC0093D453B966C9903CBCBA2936E57 /* Presenter */,
+				27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */,
+				E6B3934B267223949ADA5F3DEC3109F8 /* View */,
+				437D4B8E0E5D22C7C78721676A4C602B /* Worker */,
+			);
+			path = "Photo Detail";
+			sourceTree = "<group>";
+		};
 		B0D683D240DA0E766CBAD2E43406BDB7 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -868,6 +906,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		E6B3934B267223949ADA5F3DEC3109F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EBB3BB18D955A045437CA2DCAACB7686 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +950,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		EFC0093D453B966C9903CBCBA2936E57 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		F1E29D6E598FD6C0CB91ACBE32791281 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,55 +969,12 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		AF9BD26C6DCD6FD55C3BEBC6FB71E006 /* Photo Detail */ = {
+		D3BF1B82F3CADB024B5ACEAD2757568A /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */,
-				EFC0093D453B966C9903CBCBA2936E57 /* Presenter */,
-				27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */,
-				E6B3934B267223949ADA5F3DEC3109F8 /* View */,
-				437D4B8E0E5D22C7C78721676A4C602B /* Worker */,
+				B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */,
 			);
-			path = "Photo Detail";
-			sourceTree = "<group>";
-		};
-		E6B3934B267223949ADA5F3DEC3109F8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		437D4B8E0E5D22C7C78721676A4C602B /* Worker */ = {
-			isa = PBXGroup;
-			children = (
-				F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */,
-			);
-			path = Worker;
-			sourceTree = "<group>";
-		};
-		4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		EFC0093D453B966C9903CBCBA2936E57 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		F5D03E07B2452D55639F0088D22093E7 /* Presenter */ = {
@@ -1344,6 +1355,7 @@
 				CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */,
 				12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */,
 				FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */,
+				792F69EFA484A9A7F4AB88C5048AF6E7 /* PhotoDetailSceneFactory.swift in Sources */,
 				F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */,
 				9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */,
 				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,

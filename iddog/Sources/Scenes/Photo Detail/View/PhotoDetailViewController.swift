@@ -38,5 +38,18 @@ extension PhotoDetailViewController: ViewCodable {
 
     func setupConstraints() {}
 
-    func additionalSetup() {}
+    func additionalSetup() {
+        view.backgroundColor = R.color.appGreen()
+    }
+}
+
+extension PhotoDetailViewController: PhotoDetailDisplayLogic {
+    func displayDownloadedImage(_ image: UIImage) {
+
+    }
+
+    func displayImageError(_ errorImage: UIImage?) {
+
+    }
+
 }
