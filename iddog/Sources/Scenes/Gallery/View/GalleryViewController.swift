@@ -4,14 +4,34 @@ final class GalleryViewController: UIViewController {
     var interactor: GalleryBusinessLogic?
     var router: GalleryRouterType?
 
-    lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    lazy var flowLayout: UICollectionViewFlowLayout = {
+        let itemsPerRow = 4
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumLineSpacing = 2.0
+        flowLayout.minimumInteritemSpacing = 2.0
+        let side = (Double(view.bounds.size.width) - Double(itemsPerRow - 1) * 2.0) / Double(itemsPerRow)
+        flowLayout.itemSize = CGSize(width: side, height: side)
+        return flowLayout
     }()
 
-    var galleryData: CategoryGalleryProtocol?
+    lazy var collectionView: UICollectionView = {
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collection.collectionViewLayout = flowLayout
+        collection.backgroundColor = R.color.appLightGray()
+        collection.delegate = self
+        collection.dataSource = self
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(GalleryCollectionViewCell.self)
+        return collection
+    }()
+
+    var galleryData: CategoryGalleryProtocol? {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     // MARK: Object lifecycle
 
@@ -35,25 +55,27 @@ final class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
+        getLinkList()
+    }
+
+    private func getLinkList() {
         interactor?.getLinkList()
-//        let url = URL(string: "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg")!
-//        interactor?.downloadImage(from: url)
     }
 }
 
 extension GalleryViewController: ViewCodable {
     func buildViewHierarchy() {
-        view.addSubview(imageView)
+        view.addSubview(collectionView)
     }
 
     func setupConstraints() {
-        imageView.safeAreaTop(safeAreaView: view)
-        imageView.rightConstraint(parentView: view)
-        imageView.leftConstraint(parentView: view)
-        imageView.bottomConstraint(parentView: view)
+        collectionView.safeAreaTop(safeAreaView: view)
+        collectionView.rightConstraint(parentView: view)
+        collectionView.leftConstraint(parentView: view)
+        collectionView.bottomConstraint(parentView: view)
     }
 
     func additionalSetup() {
-        view.backgroundColor = .green
+        view.backgroundColor = R.color.appLightGray()
     }
 }

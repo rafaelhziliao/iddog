@@ -32,10 +32,10 @@ extension GalleryViewController: GalleryDisplayLogic, Alertable {
     }
 
     func displayDownloadedImage(_ image: UIImage) {
-        imageView.image = image
+//        imageView.image = image
     }
 
     func displayImageError(_ errorImage: UIImage?) {
-        imageView.image = errorImage
+//        imageView.image = errorImage
     }
 }

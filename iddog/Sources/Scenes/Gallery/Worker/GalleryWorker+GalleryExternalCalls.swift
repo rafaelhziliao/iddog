@@ -2,7 +2,6 @@ import Foundation
 
 protocol GalleryExternalCalls {
     func fetchGalleryData(for category: String, result: @escaping ResultHandler<CategoryGalleryProtocol>)
-    func fetchImage(from url: URL, result: @escaping ResulImageHandler)
 }
 
 extension GalleryWorker: GalleryExternalCalls {
@@ -29,18 +28,5 @@ extension GalleryWorker: GalleryExternalCalls {
             endpoint: galleryEndpoint,
             result: result
         )
-
-    }
-
-    func fetchImage(from url: URL, result: @escaping ResulImageHandler) {
-
-        imageLoaderService.loadImage(with: url) { response in
-            switch response {
-            case let .success(image):
-                result(.success(image))
-            case let .failure(error):
-                result(.failure(error))
-            }
-        }
     }
 }
