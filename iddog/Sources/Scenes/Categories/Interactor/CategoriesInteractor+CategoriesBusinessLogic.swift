@@ -3,6 +3,7 @@ import Foundation
 protocol CategoriesBusinessLogic {
     func logout()
     func fetchCategories()
+    func setCategoryNameOnDataStore(_ name: String)
 }
 
 extension CategoriesInteractor: CategoriesBusinessLogic {
@@ -17,4 +18,8 @@ extension CategoriesInteractor: CategoriesBusinessLogic {
         })
     }
 
+    func setCategoryNameOnDataStore(_ name: String) {
+        self.categoryName = name
+        presenter?.presentCategoryGallery()
+    }
 }

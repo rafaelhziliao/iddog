@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navBarTitleTextAttributes: R.color.appWhite(),
             navBarLargeTitleTextAttributes: R.color.appWhite(),
             navBarBackgroudColor: R.color.appPurple(),
+            navBarTintColor: R.color.appWhite(),
             alertControllerTintColor: R.color.appPurple()
         ).apply()
 

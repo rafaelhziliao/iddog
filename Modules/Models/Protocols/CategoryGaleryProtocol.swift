@@ -1,6 +1,6 @@
 import Foundation
 
-protocol CategoryGaleryProtocol {
+protocol CategoryGalleryProtocol {
     var name: String { get }
     var list: [URL] { get }
 }
