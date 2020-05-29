@@ -22,8 +22,8 @@ extension GalleryInteractor: GalleryBusinessLogic {
             switch result {
             case let .success(image):
                 self?.presenter?.presentDownloadedImage(image)
-            case let .failure(error):
-                self?.presenter?.presentErrorOnDownloadImage(error)
+            case .failure:
+                self?.presenter?.presentImageError()
             }
         }
     }

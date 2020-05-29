@@ -20,9 +20,11 @@ public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
     }
 
     private func configure() {
-        let contentModes = ImageLoadingOptions.ContentModes(success: .scaleAspectFill,
-                                                            failure: .scaleAspectFit,
-                                                            placeholder: .scaleAspectFit)
+        let contentModes = ImageLoadingOptions.ContentModes(
+            success: .scaleAspectFill,
+            failure: .scaleAspectFit,
+            placeholder: .scaleAspectFit
+        )
         ImageLoadingOptions.shared.transition = .fadeIn(duration: 0.5)
         ImageLoadingOptions.shared.contentModes = contentModes
     }

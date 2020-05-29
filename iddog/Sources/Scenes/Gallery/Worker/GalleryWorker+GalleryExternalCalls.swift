@@ -42,6 +42,5 @@ extension GalleryWorker: GalleryExternalCalls {
                 result(.failure(error))
             }
         }
-
     }
 }

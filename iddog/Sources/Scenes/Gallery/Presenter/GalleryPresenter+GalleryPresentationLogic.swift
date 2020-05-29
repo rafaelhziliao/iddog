@@ -2,7 +2,7 @@ import UIKit
 
 protocol GalleryPresentationLogic {
     func presentDownloadedImage(_ image: UIImage)
-    func presentErrorOnDownloadImage(_ error: Error)
+    func presentImageError()
     func presentCategoryGallery(_ categoryGallery: CategoryGalleryProtocol)
     func presentErrorOnLoadGallery(_ error: NetworkError)
 }
@@ -20,7 +20,8 @@ extension GalleryPresenter: GalleryPresentationLogic {
         viewController?.displayDownloadedImage(image)
     }
 
-    func presentErrorOnDownloadImage(_ error: Error) {
-        viewController?.displayErrorMessageOnDownloadImage(error)
+    func presentImageError() {
+        let errorImage = R.image.downloadImageError()
+        viewController?.displayImageError(errorImage)
     }
 }
