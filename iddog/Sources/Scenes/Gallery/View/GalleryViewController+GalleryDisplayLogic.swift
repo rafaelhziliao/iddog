@@ -1,15 +1,16 @@
 import UIKit
 
 protocol GalleryDisplayLogic: class {
-    func displayDownloadedImage(_ image: UIImage)
-    func displayImageError(_ errorImage: UIImage?)
     func setCategoryGalleryData(_ categoryGallery: CategoryGalleryProtocol)
     func displayErrorMessageOnGetGalleryData(_ error: NetworkError)
 }
 
 extension GalleryViewController: GalleryDisplayLogic, Alertable {
     func setCategoryGalleryData(_ categoryGallery: CategoryGalleryProtocol) {
-        galleryData = categoryGallery
+        DispatchQueue.main.async {
+            self.title = categoryGallery.name
+            self.galleryData = categoryGallery
+        }
     }
 
     func displayErrorMessageOnGetGalleryData(_ error: NetworkError) {
@@ -29,13 +30,5 @@ extension GalleryViewController: GalleryDisplayLogic, Alertable {
             )
             self.router?.routeToAlert(alert)
         }
-    }
-
-    func displayDownloadedImage(_ image: UIImage) {
-//        imageView.image = image
-    }
-
-    func displayImageError(_ errorImage: UIImage?) {
-//        imageView.image = errorImage
     }
 }

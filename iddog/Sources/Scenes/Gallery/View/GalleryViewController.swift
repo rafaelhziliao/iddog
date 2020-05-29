@@ -27,9 +27,7 @@ final class GalleryViewController: UIViewController {
 
     var galleryData: CategoryGalleryProtocol? {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            collectionView.reloadData()
         }
     }
 
