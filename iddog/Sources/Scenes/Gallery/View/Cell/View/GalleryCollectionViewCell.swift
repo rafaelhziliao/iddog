@@ -26,6 +26,11 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
+
     private func setupVIPArchitecture() {
         let view = self
         let interactor = GalleryCollectionViewCellInteractor()

@@ -7,6 +7,14 @@ protocol PhotoDetailDisplayLogic: class {
 
 final class PhotoDetailViewController: UIViewController {
     var interactor: PhotoDetailBusinessLogic?
+    var router: PhotoDetailRouterType?
+
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
 
     // MARK: Object lifecycle
 
@@ -30,26 +38,36 @@ final class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
+        interactor?.downloadImage()
     }
 }
 
 extension PhotoDetailViewController: ViewCodable {
-    func buildViewHierarchy() {}
-
-    func setupConstraints() {}
-
-    func additionalSetup() {
-        view.backgroundColor = R.color.appGreen()
+    func buildViewHierarchy() {
+        view.addSubview(imageView)
     }
+
+    func setupConstraints() {
+        imageView.centerXConstraint(parentView: view)
+        imageView.centerYConstraint(parentView: view)
+        imageView.widthConstraintEqualTo(parentView: view)
+        imageView.heightConstraintEqualTo(parentView: view)
+    }
+
+    func additionalSetup() {}
 }
 
 extension PhotoDetailViewController: PhotoDetailDisplayLogic {
     func displayDownloadedImage(_ image: UIImage) {
-
+        DispatchQueue.main.async {
+            self.imageView.image = image
+        }
     }
 
     func displayImageError(_ errorImage: UIImage?) {
-
+        DispatchQueue.main.async {
+            self.imageView.image = errorImage
+        }
     }
 
 }

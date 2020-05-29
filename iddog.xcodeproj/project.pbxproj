@@ -100,6 +100,7 @@
 		CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */; };
 		12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */; };
 		FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */; };
+		1AAF66CCC0D059E091817EBF712FBAC1 /* PhotoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F641E7EA9D35B1629EA4E606049E7 /* PhotoDetailRouter.swift */; };
 		792F69EFA484A9A7F4AB88C5048AF6E7 /* PhotoDetailSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */; };
 		F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */; };
 		9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */; };
@@ -236,6 +237,7 @@
 		B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeImageLoaderProvider.swift; sourceTree = "<group>"; };
 		89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailInteractor.swift; sourceTree = "<group>"; };
 		7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresenter.swift; sourceTree = "<group>"; };
+		9E7F641E7EA9D35B1629EA4E606049E7 /* PhotoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailRouter.swift; sourceTree = "<group>"; };
 		B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailSceneFactory.swift; sourceTree = "<group>"; };
 		3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailWorker.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 		27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				9E7F641E7EA9D35B1629EA4E606049E7 /* PhotoDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -862,6 +865,14 @@
 			path = iddog;
 			sourceTree = "<group>";
 		};
+		D3BF1B82F3CADB024B5ACEAD2757568A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		D4C22B35043BD4F5881561122B2D46FC /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -967,14 +978,6 @@
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		D3BF1B82F3CADB024B5ACEAD2757568A /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				B464D427F2EF512ABF62AD6615C0B947 /* PhotoDetailSceneFactory.swift */,
-			);
-			path = Factory;
 			sourceTree = "<group>";
 		};
 		F5D03E07B2452D55639F0088D22093E7 /* Presenter */ = {
@@ -1355,6 +1358,7 @@
 				CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */,
 				12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */,
 				FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */,
+				1AAF66CCC0D059E091817EBF712FBAC1 /* PhotoDetailRouter.swift in Sources */,
 				792F69EFA484A9A7F4AB88C5048AF6E7 /* PhotoDetailSceneFactory.swift in Sources */,
 				F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */,
 				9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */,

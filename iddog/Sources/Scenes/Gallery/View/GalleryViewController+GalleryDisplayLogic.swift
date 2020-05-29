@@ -3,6 +3,7 @@ import UIKit
 protocol GalleryDisplayLogic: class {
     func setCategoryGalleryData(_ categoryGallery: CategoryGalleryProtocol)
     func displayErrorMessageOnGetGalleryData(_ error: NetworkError)
+    func displayPhotoDetail()
 }
 
 extension GalleryViewController: GalleryDisplayLogic, Alertable {
@@ -30,5 +31,9 @@ extension GalleryViewController: GalleryDisplayLogic, Alertable {
             )
             self.router?.routeToAlert(alert)
         }
+    }
+
+    func displayPhotoDetail() {
+        router?.routeToPhotoDetail()
     }
 }

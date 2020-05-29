@@ -16,7 +16,10 @@ extension GalleryRouter: GalleryRoutingLogic {
     }
 
     func routeToPhotoDetail() {
-        let photoDetailScene = PhotoDetailSceneFactory(sourceViewController: viewController)
+        let photoDetailScene = PhotoDetailSceneFactory(
+            sourceViewController: viewController,
+            galleryDataStore: dataStore!
+        )
         photoDetailScene.make()
     }
 }
