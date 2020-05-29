@@ -3,6 +3,7 @@ import UIKit
 protocol GalleryRoutingLogic {
     func dismissAlert()
     func routeToAlert(_ alert: UIAlertController)
+    func routeToPhotoDetail()
 }
 
 extension GalleryRouter: GalleryRoutingLogic {
@@ -12,5 +13,13 @@ extension GalleryRouter: GalleryRoutingLogic {
 
     func routeToAlert(_ alert: UIAlertController) {
         showAlert(alert)
+    }
+
+    func routeToPhotoDetail() {
+        let photoDetailScene = PhotoDetailSceneFactory(
+            sourceViewController: viewController,
+            galleryDataStore: dataStore!
+        )
+        photoDetailScene.make()
     }
 }

@@ -3,6 +3,7 @@ import UIKit
 protocol GalleryPresentationLogic {
     func presentCategoryGallery(_ categoryGallery: CategoryGalleryProtocol)
     func presentErrorOnLoadGallery(_ error: NetworkError)
+    func presentPhotoDetail()
 }
 
 extension GalleryPresenter: GalleryPresentationLogic {
@@ -12,5 +13,9 @@ extension GalleryPresenter: GalleryPresentationLogic {
 
     func presentErrorOnLoadGallery(_ error: NetworkError) {
         viewController?.displayErrorMessageOnGetGalleryData(error)
+    }
+
+    func presentPhotoDetail() {
+        viewController?.displayPhotoDetail()
     }
 }
