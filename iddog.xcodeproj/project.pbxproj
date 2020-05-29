@@ -98,6 +98,10 @@
 		836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EED204D343B8C1FD12C14DA085C185 /* NetworkError.swift */; };
 		3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA82687F76EC9F23AD123F76B5B6E13 /* NetworkProviderProtocol.swift */; };
 		CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */; };
+		12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */; };
+		FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */; };
+		F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */; };
+		9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */; };
 		3B17A8E0C6634C1CE8ED49F0893CE8D3 /* Pods_iddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B105259E2C2D1541C140F19FD44699A /* Pods_iddog.framework */; };
 		B0013A3BA253C3BA3A2B143C90E6D980 /* Pods_iddogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3809F94B72C4A7029457EC5BC50C148 /* Pods_iddogTests.framework */; };
 		10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */; };
@@ -229,6 +233,10 @@
 		48EED204D343B8C1FD12C14DA085C185 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AAA82687F76EC9F23AD123F76B5B6E13 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
 		B2D9A523CA240C56FA400CA6812252CF /* NukeImageLoaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NukeImageLoaderProvider.swift; sourceTree = "<group>"; };
+		89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailInteractor.swift; sourceTree = "<group>"; };
+		7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailPresenter.swift; sourceTree = "<group>"; };
+		3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailWorker.swift; sourceTree = "<group>"; };
 		94E07D0D9FF8A7CDF5ED20A23DB1ADEE /* Pods-iddog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddog.debug.xcconfig"; path = "Target Support Files/Pods-iddog/Pods-iddog.debug.xcconfig"; sourceTree = "<group>"; };
 		9CD92116F9F709FEF9A747CDD8A4CB61 /* Pods-iddog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddog.release.xcconfig"; path = "Target Support Files/Pods-iddog/Pods-iddog.release.xcconfig"; sourceTree = "<group>"; };
 		C41742DE5E324C8320EF58AABF88424B /* Pods-iddogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iddogTests.debug.xcconfig"; path = "Target Support Files/Pods-iddogTests/Pods-iddogTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -494,6 +502,7 @@
 				F68F66D05A41410A4FD07B8F91575030 /* Gallery */,
 				CF0BAFE2D3192A6F9ADE431C51DCD695 /* Login */,
 				39B7D05A046876AA27E4E7CBA5F52077 /* Main */,
+				AF9BD26C6DCD6FD55C3BEBC6FB71E006 /* Photo Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -906,6 +915,57 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		AF9BD26C6DCD6FD55C3BEBC6FB71E006 /* Photo Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */,
+				EFC0093D453B966C9903CBCBA2936E57 /* Presenter */,
+				27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */,
+				E6B3934B267223949ADA5F3DEC3109F8 /* View */,
+				437D4B8E0E5D22C7C78721676A4C602B /* Worker */,
+			);
+			path = "Photo Detail";
+			sourceTree = "<group>";
+		};
+		E6B3934B267223949ADA5F3DEC3109F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CB99DDF4E7F0DE29A378390F9DC1F57 /* PhotoDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		437D4B8E0E5D22C7C78721676A4C602B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				F9B75E52C95314EF8D833428FE8551BD /* PhotoDetailWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		4093FB81BF5AA90C63FAEF675DACCD59 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				89D2858041DAA39124D50DBAC7D05797 /* PhotoDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EFC0093D453B966C9903CBCBA2936E57 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7DF44945B4D06B2E0AAFC90956457560 /* PhotoDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		27B025D0F6624F1C7CD8E4C2A20D68A7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		F5D03E07B2452D55639F0088D22093E7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1282,6 +1342,10 @@
 				836BF289C9D950989F2BEF8B207115AA /* NetworkError.swift in Sources */,
 				3952C66F732EBEF1DE1E3A55D9F65EF4 /* NetworkProviderProtocol.swift in Sources */,
 				CC4B7CCE94A916DEF6F036E8D3DACC29 /* NukeImageLoaderProvider.swift in Sources */,
+				12C63A2CF2ED9347E030BEF6AB4403CA /* PhotoDetailInteractor.swift in Sources */,
+				FB726D5EB73339A4F77B74052EF85116 /* PhotoDetailPresenter.swift in Sources */,
+				F726DBF67AFC71F232A25BCBDB48EFE8 /* PhotoDetailViewController.swift in Sources */,
+				9472BEA57B67C8D59ED0E2B23E558A09 /* PhotoDetailWorker.swift in Sources */,
 				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,
 				A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */,
 				DAD9A424A65CE96AFDC6EB428AD64027 /* RouterShowAlert.swift in Sources */,
