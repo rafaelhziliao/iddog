@@ -26,11 +26,6 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        imageView.image = nil
-    }
-
     private func setupCellArchitecture() {
         let view = self
         let interactor = GalleryCollectionViewCellInteractor()
@@ -63,20 +58,18 @@ extension GalleryCollectionViewCell: ViewCodable {
 
 extension GalleryCollectionViewCell: Fillable {
     func fill(with data: URL) {
-        interactor?.downloadImage(from: data)
+        DispatchQueue.main.async {
+            self.interactor?.downloadImage(from: data)
+        }
     }
 }
 
 extension GalleryCollectionViewCell: GalleryCollectionViewCellDisplayLogic {
     func displayDownloadedImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.imageView.image = image
-        }
+        imageView.image = image
     }
 
     func displayImageError(_ errorImage: UIImage?) {
-        DispatchQueue.main.async {
-            self.imageView.image = errorImage
-        }
+        imageView.image = errorImage
     }
 }
