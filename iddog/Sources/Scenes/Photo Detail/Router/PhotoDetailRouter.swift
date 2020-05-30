@@ -1,19 +1,14 @@
 import UIKit
 
-typealias PhotoDetailRouterType = (PhotoDetailRoutingLogic & PhotoDetailDataPassing)
+typealias PhotoDetailRouterType = (PhotoDetailDataPassing)
 
 protocol PhotoDetailDataPassing {
     var dataStore: PhotoDetailDataStore? { get }
 }
 
-protocol PhotoDetailRoutingLogic {}
-
-final class PhotoDetailRouter: RouterShowAlert {
+final class PhotoDetailRouter: PhotoDetailDataPassing, RouterShowAlert {
     weak var viewController: UIViewController?
     var dataStore: PhotoDetailDataStore?
 
     init() {}
 }
-
-extension PhotoDetailRouter: PhotoDetailRoutingLogic {}
-extension PhotoDetailRouter: PhotoDetailDataPassing {}
