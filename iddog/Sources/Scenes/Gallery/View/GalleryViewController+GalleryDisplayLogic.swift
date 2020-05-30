@@ -8,30 +8,26 @@ protocol GalleryDisplayLogic: class {
 
 extension GalleryViewController: GalleryDisplayLogic, Alertable, FullScreenLoader {
     func setCategoryGalleryData(_ categoryGallery: CategoryGalleryProtocol) {
-        DispatchQueue.main.async {
-            self.showLoading(false)
-            self.galleryData = categoryGallery
-            self.title = categoryGallery.name
-        }
+        showLoading(false)
+        galleryData = categoryGallery
+        title = categoryGallery.name
     }
 
     func displayErrorMessageOnGetGalleryData(_ error: NetworkError) {
-        DispatchQueue.main.async {
-            let retryAction: ((UIAlertAction) -> Void) = { action in
-                self.interactor?.getLinkList()
-            }
-
-            let cancelAction: ((UIAlertAction) -> Void) = { action in
-                self.router?.dismissAlert()
-            }
-
-            let alert = self.alertWithRetry(
-                retryAction,
-                cancelAction,
-                for: error
-            )
-            self.router?.routeToAlert(alert)
+        let retryAction: ((UIAlertAction) -> Void) = { [weak self] action in
+            self?.interactor?.getLinkList()
         }
+
+        let cancelAction: ((UIAlertAction) -> Void) = { [weak self] action in
+            self?.router?.dismissAlert()
+        }
+
+        let alert = alertWithRetry(
+            retryAction,
+            cancelAction,
+            for: error
+        )
+        router?.routeToAlert(alert)
     }
 
     func displayPhotoDetail() {

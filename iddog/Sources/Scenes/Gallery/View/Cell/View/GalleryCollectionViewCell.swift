@@ -58,9 +58,7 @@ extension GalleryCollectionViewCell: ViewCodable {
 
 extension GalleryCollectionViewCell: Fillable {
     func fill(with data: URL) {
-        DispatchQueue.main.async {
-            self.interactor?.downloadImage(from: data)
-        }
+        interactor?.downloadImage(from: data)
     }
 }
 

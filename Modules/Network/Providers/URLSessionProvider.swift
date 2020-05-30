@@ -14,8 +14,16 @@ public final class URLSessionProvider: NetworkProviderProtocol, RequestHandleRes
         guard let request = URLRequest(endpoint: endpoint) else { preconditionFailure("Fail on create request") }
 
         let task = session.dataTask(with: request) { data, response, error in
-            let response = response as? HTTPURLResponse
-            self.handleResponse(data: data, response: response, error: error, result: result)
+            DispatchQueue.main.async {
+                let response = response as? HTTPURLResponse
+
+                self.handleResponse(
+                    data: data,
+                    response: response,
+                    error: error,
+                    result: result
+                )
+            }
         }
         task.resume()
     }

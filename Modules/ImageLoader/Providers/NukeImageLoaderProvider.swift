@@ -12,11 +12,13 @@ public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
         let request = ImageRequest(url: url)
 
         ImagePipeline.shared.loadImage(with: request, queue: nil, progress: nil) { response in
-            switch response {
-            case let .success(imageResponse):
-                result(.success(imageResponse.image))
-            case let .failure(error):
-                result(.failure(error))
+            DispatchQueue.main.async {
+                switch response {
+                case let .success(imageResponse):
+                    result(.success(imageResponse.image))
+                case let .failure(error):
+                    result(.failure(error))
+                }
             }
         }
     }

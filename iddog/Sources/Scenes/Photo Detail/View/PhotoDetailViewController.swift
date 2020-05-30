@@ -64,17 +64,13 @@ extension PhotoDetailViewController: ViewCodable {
 
 extension PhotoDetailViewController: PhotoDetailDisplayLogic, FullScreenLoader {
     func displayDownloadedImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.showLoading(false)
-            self.imageView.image = image
-        }
+        showLoading(false)
+        imageView.image = image
     }
 
     func displayImageError(_ errorImage: UIImage?) {
-        DispatchQueue.main.async {
-            self.showLoading(false)
-            self.imageView.image = errorImage
-        }
+        showLoading(false)
+        imageView.image = errorImage
     }
 
 }
