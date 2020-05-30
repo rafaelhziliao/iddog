@@ -27,7 +27,7 @@
 		235CB217EF09E4FD6197A2A8765ED93B /* CategoriesWorker+CategoriesExternalCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC068CEB884817EE7EFB53A6D5ADC01 /* CategoriesWorker+CategoriesExternalCalls.swift */; };
 		D9C88672BFB70425FCBAF244D7D0CFA0 /* CategoriesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B3BFC8DAF3AFCB90468063A0DA6CAF /* CategoriesWorker.swift */; };
 		FD6E5030DC369A2B4D9BAF1261EA588D /* CategoryCalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EA6E0042743BABFD09F5A2D2020F01 /* CategoryCalleryModel.swift */; };
-		076A107E0959A79B382A9DAFF3AC05B7 /* CategoryGaleryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */; };
+		A31C7F6383837F56D2983727A35ED1BC /* CategoryGalleryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EFE7EC8240BEB35493902A489B8BCB /* CategoryGalleryProtocol.swift */; };
 		33DC153BAB178B9F0A758CCF7F409FCA /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C81860F135DCE921CE11EF160557B /* CategoryModel.swift */; };
 		D235B8CFAA7835C6F41A03232BD1C824 /* CategoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */; };
 		912B1ACA69524F1D804265D7EF49B131 /* ComponentConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D690359EF272D88ECF5F50C673F12BE /* ComponentConstants.swift */; };
@@ -172,7 +172,7 @@
 		5AC068CEB884817EE7EFB53A6D5ADC01 /* CategoriesWorker+CategoriesExternalCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesWorker+CategoriesExternalCalls.swift"; sourceTree = "<group>"; };
 		40B3BFC8DAF3AFCB90468063A0DA6CAF /* CategoriesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWorker.swift; sourceTree = "<group>"; };
 		F6EA6E0042743BABFD09F5A2D2020F01 /* CategoryCalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCalleryModel.swift; sourceTree = "<group>"; };
-		3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGaleryProtocol.swift; sourceTree = "<group>"; };
+		65EFE7EC8240BEB35493902A489B8BCB /* CategoryGalleryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGalleryProtocol.swift; sourceTree = "<group>"; };
 		868C81860F135DCE921CE11EF160557B /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProtocol.swift; sourceTree = "<group>"; };
 		9D690359EF272D88ECF5F50C673F12BE /* ComponentConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentConstants.swift; sourceTree = "<group>"; };
@@ -1026,7 +1026,7 @@
 		F1E29D6E598FD6C0CB91ACBE32791281 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3E3EDB3199F6E19B170FAA009CEAA74B /* CategoryGaleryProtocol.swift */,
+				65EFE7EC8240BEB35493902A489B8BCB /* CategoryGalleryProtocol.swift */,
 				7C50CC11AD66D115CF719B4F925E7856 /* CategoryProtocol.swift */,
 				A203503D8B2A731609828777C7E9BD0D /* CredentialsProtocol.swift */,
 				D59DA7DD22787EBA87D315C63F2D3D4E /* UserProtocol.swift */,
@@ -1343,7 +1343,7 @@
 				235CB217EF09E4FD6197A2A8765ED93B /* CategoriesWorker+CategoriesExternalCalls.swift in Sources */,
 				D9C88672BFB70425FCBAF244D7D0CFA0 /* CategoriesWorker.swift in Sources */,
 				FD6E5030DC369A2B4D9BAF1261EA588D /* CategoryCalleryModel.swift in Sources */,
-				076A107E0959A79B382A9DAFF3AC05B7 /* CategoryGaleryProtocol.swift in Sources */,
+				A31C7F6383837F56D2983727A35ED1BC /* CategoryGalleryProtocol.swift in Sources */,
 				33DC153BAB178B9F0A758CCF7F409FCA /* CategoryModel.swift in Sources */,
 				D235B8CFAA7835C6F41A03232BD1C824 /* CategoryProtocol.swift in Sources */,
 				912B1ACA69524F1D804265D7EF49B131 /* ComponentConstants.swift in Sources */,
