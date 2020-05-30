@@ -53,6 +53,7 @@
 		0993B04A7B9B124F7975B209A9D4CF5C /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0010F89034A22909FB6EB5ADF9F6CF /* GalleryRouter.swift */; };
 		0F5F7DF16E1D4F14834DD72DA22FAFDD /* GallerySceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5072CD544C522EE17E6EF674855AB5 /* GallerySceneFactory.swift */; };
 		7517A165B44226AAF24406766783F10C /* GalleryViewController+CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BEC0F8E3D7FCAEFABD0266B7915659 /* GalleryViewController+CollectionViewDataSource.swift */; };
+		73862D42FF334090EBD0856558928642 /* GalleryViewController+CollectionViewDataSourcePrefetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF135F26A6813D456757ABAD09985B34 /* GalleryViewController+CollectionViewDataSourcePrefetching.swift */; };
 		94EEF91B62759320730EDC28DBD7803B /* GalleryViewController+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4764ADC7B7C4E8D0EDDB7838B7ED21C /* GalleryViewController+CollectionViewDelegate.swift */; };
 		4961B8EAE5560CEEA36AC592A28466FF /* GalleryViewController+GalleryDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E5AD057540B62B059860A3B820E5 /* GalleryViewController+GalleryDisplayLogic.swift */; };
 		965D3AA4A882CB389C763F69169789EB /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6D9A2B417F4467F43DCB91A77A996A /* GalleryViewController.swift */; };
@@ -188,6 +189,7 @@
 		EC0010F89034A22909FB6EB5ADF9F6CF /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
 		4B5072CD544C522EE17E6EF674855AB5 /* GallerySceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySceneFactory.swift; sourceTree = "<group>"; };
 		41BEC0F8E3D7FCAEFABD0266B7915659 /* GalleryViewController+CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryViewController+CollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		AF135F26A6813D456757ABAD09985B34 /* GalleryViewController+CollectionViewDataSourcePrefetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryViewController+CollectionViewDataSourcePrefetching.swift"; sourceTree = "<group>"; };
 		F4764ADC7B7C4E8D0EDDB7838B7ED21C /* GalleryViewController+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryViewController+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		2DE8E5AD057540B62B059860A3B820E5 /* GalleryViewController+GalleryDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryViewController+GalleryDisplayLogic.swift"; sourceTree = "<group>"; };
 		DC6D9A2B417F4467F43DCB91A77A996A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 			children = (
 				53ACC657CAB35AF129D7412AC5F3DF55 /* Cell */,
 				41BEC0F8E3D7FCAEFABD0266B7915659 /* GalleryViewController+CollectionViewDataSource.swift */,
+				AF135F26A6813D456757ABAD09985B34 /* GalleryViewController+CollectionViewDataSourcePrefetching.swift */,
 				F4764ADC7B7C4E8D0EDDB7838B7ED21C /* GalleryViewController+CollectionViewDelegate.swift */,
 				2DE8E5AD057540B62B059860A3B820E5 /* GalleryViewController+GalleryDisplayLogic.swift */,
 				DC6D9A2B417F4467F43DCB91A77A996A /* GalleryViewController.swift */,
@@ -1315,6 +1318,7 @@
 				0993B04A7B9B124F7975B209A9D4CF5C /* GalleryRouter.swift in Sources */,
 				0F5F7DF16E1D4F14834DD72DA22FAFDD /* GallerySceneFactory.swift in Sources */,
 				7517A165B44226AAF24406766783F10C /* GalleryViewController+CollectionViewDataSource.swift in Sources */,
+				73862D42FF334090EBD0856558928642 /* GalleryViewController+CollectionViewDataSourcePrefetching.swift in Sources */,
 				94EEF91B62759320730EDC28DBD7803B /* GalleryViewController+CollectionViewDelegate.swift in Sources */,
 				4961B8EAE5560CEEA36AC592A28466FF /* GalleryViewController+GalleryDisplayLogic.swift in Sources */,
 				965D3AA4A882CB389C763F69169789EB /* GalleryViewController.swift in Sources */,

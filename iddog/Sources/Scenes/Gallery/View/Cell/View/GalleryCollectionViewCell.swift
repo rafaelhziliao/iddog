@@ -18,7 +18,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupVIPArchitecture()
+        setupCellArchitecture()
         buildView()
     }
 
@@ -31,7 +31,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
         imageView.image = nil
     }
 
-    private func setupVIPArchitecture() {
+    private func setupCellArchitecture() {
         let view = self
         let interactor = GalleryCollectionViewCellInteractor()
         let presenter = GalleryCollectionViewCellPresenter()

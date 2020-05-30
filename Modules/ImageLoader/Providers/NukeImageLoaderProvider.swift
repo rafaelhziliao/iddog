@@ -2,6 +2,8 @@ import Foundation
 import Nuke
 
 public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
+    private let preheater = ImagePreheater()
+
     public init () {
         configure()
     }
@@ -28,4 +30,13 @@ public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
         ImageLoadingOptions.shared.transition = .fadeIn(duration: 0.5)
         ImageLoadingOptions.shared.contentModes = contentModes
     }
+
+    public func starPrefetchDataSourceOperation(with urls: [URL]) {
+        preheater.startPreheating(with: urls)
+    }
+
+    public func cancelPrefethcDataSoucerOperation(with urls: [URL]) {
+        preheater.stopPreheating(with: urls)
+    }
+
 }

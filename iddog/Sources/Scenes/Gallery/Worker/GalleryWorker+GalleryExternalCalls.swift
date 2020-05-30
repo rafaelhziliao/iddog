@@ -2,6 +2,8 @@ import Foundation
 
 protocol GalleryExternalCalls {
     func fetchGalleryData(for category: String, result: @escaping ResultHandler<CategoryGalleryProtocol>)
+    func starPrefetchDataSourceOperation(with urls: [URL])
+    func cancelPrefethcDataSoucerOperation(with urls: [URL])
 }
 
 extension GalleryWorker: GalleryExternalCalls {
@@ -28,5 +30,13 @@ extension GalleryWorker: GalleryExternalCalls {
             endpoint: galleryEndpoint,
             result: result
         )
+    }
+
+    func starPrefetchDataSourceOperation(with urls: [URL]) {
+        imageLoaderService.starPrefetchDataSourceOperation(with: urls)
+    }
+
+    func cancelPrefethcDataSoucerOperation(with urls: [URL]) {
+        imageLoaderService.cancelPrefethcDataSoucerOperation(with: urls)
     }
 }
