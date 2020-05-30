@@ -110,6 +110,8 @@
 		10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */; };
 		A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */; };
 		DAD9A424A65CE96AFDC6EB428AD64027 /* RouterShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */; };
+		5958D3D71414508D8B9918B0B5B70509 /* ScreenLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EDF86AB859696DA07C80F11B28275E /* ScreenLoader.swift */; };
+		DCB26D36F30419DEE0419D0381E19FB8 /* ScreenLoaderProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B26DEEED9A996B867C39D59E78C2B3 /* ScreenLoaderProtocols.swift */; };
 		BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */; };
 		8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */; };
 		5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */; };
@@ -252,6 +254,8 @@
 		F4CB9FDF48355D98929CD1F515F2CF09 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0FFF98F37E4A6236A17ED363A8601F93 /* RootSceneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSceneType.swift; sourceTree = "<group>"; };
 		E906C5F4D1E2712E36B346491D7B6180 /* RouterShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterShowAlert.swift; sourceTree = "<group>"; };
+		38EDF86AB859696DA07C80F11B28275E /* ScreenLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLoader.swift; sourceTree = "<group>"; };
+		D4B26DEEED9A996B867C39D59E78C2B3 /* ScreenLoaderProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLoaderProtocols.swift; sourceTree = "<group>"; };
 		9A06AA1E2E7B5BEB2E14647BDDAC34EE /* SecurityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityServiceProtocol.swift; sourceTree = "<group>"; };
 		5C5F96E751B57E4A84BF7B164782E9AF /* SecurityStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityStorageProtocol.swift; sourceTree = "<group>"; };
 		590727027E3B917E28754A2722035F10 /* SignupEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEndpoint.swift; sourceTree = "<group>"; };
@@ -568,6 +572,7 @@
 		5AE01F50803EE1ECFD223ADF972E06CF /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				C9118351BA7AC93D9EE327BA1110C5A0 /* Components */,
 				42EBC9A5B367663394E2356F27B39BCA /* Extensions */,
 				4C0F2AFFBCA9C0D30177A5668F20D878 /* Helpers */,
 				18C3541A442E26AD7407CAEAFB6BC073 /* Protocols */,
@@ -992,6 +997,31 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		C9118351BA7AC93D9EE327BA1110C5A0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2E54B3AC951F69BEFD067C2CFE4A519 /* ScreenLoader */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B2E54B3AC951F69BEFD067C2CFE4A519 /* ScreenLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C2482935B81F9E21BBC266624033B76F /* Protocols */,
+				38EDF86AB859696DA07C80F11B28275E /* ScreenLoader.swift */,
+			);
+			path = ScreenLoader;
+			sourceTree = "<group>";
+		};
+		C2482935B81F9E21BBC266624033B76F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4B26DEEED9A996B867C39D59E78C2B3 /* ScreenLoaderProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		F68F66D05A41410A4FD07B8F91575030 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -1369,6 +1399,8 @@
 				10B9EB20F6E37070C4D06B561ACC9122 /* R.generated.swift in Sources */,
 				A391A2B259D0629286799DB4149C591A /* RootSceneType.swift in Sources */,
 				DAD9A424A65CE96AFDC6EB428AD64027 /* RouterShowAlert.swift in Sources */,
+				5958D3D71414508D8B9918B0B5B70509 /* ScreenLoader.swift in Sources */,
+				DCB26D36F30419DEE0419D0381E19FB8 /* ScreenLoaderProtocols.swift in Sources */,
 				BBBEBA9CE6684303AC551A13D29622B0 /* SecurityServiceProtocol.swift in Sources */,
 				8DDA27FE6077A385CDD954EEEAF1F74A /* SecurityStorageProtocol.swift in Sources */,
 				5A41F667620FA927A27249BE7123F1B6 /* SignupEndpoint.swift in Sources */,

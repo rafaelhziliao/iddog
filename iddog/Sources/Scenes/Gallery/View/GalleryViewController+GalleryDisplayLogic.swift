@@ -6,11 +6,12 @@ protocol GalleryDisplayLogic: class {
     func displayPhotoDetail()
 }
 
-extension GalleryViewController: GalleryDisplayLogic, Alertable {
+extension GalleryViewController: GalleryDisplayLogic, Alertable, FullScreenLoader {
     func setCategoryGalleryData(_ categoryGallery: CategoryGalleryProtocol) {
         DispatchQueue.main.async {
-            self.title = categoryGallery.name
+            self.showLoading(false)
             self.galleryData = categoryGallery
+            self.title = categoryGallery.name
         }
     }
 

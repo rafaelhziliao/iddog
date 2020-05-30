@@ -59,6 +59,7 @@ final class GalleryViewController: UIViewController {
     }
 
     private func getLinkList() {
+        showLoading(true)
         interactor?.getLinkList()
     }
 }

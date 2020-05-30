@@ -38,6 +38,11 @@ final class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
+        downloadImage()
+    }
+
+    private func downloadImage() {
+        showLoading(true)
         interactor?.downloadImage()
     }
 }
@@ -57,15 +62,17 @@ extension PhotoDetailViewController: ViewCodable {
     func additionalSetup() {}
 }
 
-extension PhotoDetailViewController: PhotoDetailDisplayLogic {
+extension PhotoDetailViewController: PhotoDetailDisplayLogic, FullScreenLoader {
     func displayDownloadedImage(_ image: UIImage) {
         DispatchQueue.main.async {
+            self.showLoading(false)
             self.imageView.image = image
         }
     }
 
     func displayImageError(_ errorImage: UIImage?) {
         DispatchQueue.main.async {
+            self.showLoading(false)
             self.imageView.image = errorImage
         }
     }

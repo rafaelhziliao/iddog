@@ -7,7 +7,7 @@ protocol CategoriesDisplayLogic: class {
     func displayCategoryGallery()
 }
 
-extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
+extension CategoriesViewController: CategoriesDisplayLogic, Alertable, FullScreenLoader {
     func displayLogin() {
         router?.routeToLogin()
     }
@@ -38,6 +38,7 @@ extension CategoriesViewController: CategoriesDisplayLogic, Alertable {
     }
 
     func displayCategories(_ categories: CategoriesModel) {
+        showLoading(false)
         //didSet property observer
         self.categories = categories
     }
