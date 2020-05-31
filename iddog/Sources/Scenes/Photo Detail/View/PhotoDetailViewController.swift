@@ -1,10 +1,5 @@
 import UIKit
 
-protocol PhotoDetailDisplayLogic: class {
-    func displayDownloadedImage(_ image: UIImage)
-    func displayImageError(_ errorImage: UIImage?)
-}
-
 final class PhotoDetailViewController: UIViewController {
     var interactor: PhotoDetailBusinessLogic?
     var router: PhotoDetailRouterType?
@@ -38,6 +33,11 @@ final class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildView()
+        downloadImage()
+    }
+
+    private func downloadImage() {
+        showLoading(true)
         interactor?.downloadImage()
     }
 }
@@ -55,19 +55,4 @@ extension PhotoDetailViewController: ViewCodable {
     }
 
     func additionalSetup() {}
-}
-
-extension PhotoDetailViewController: PhotoDetailDisplayLogic {
-    func displayDownloadedImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.imageView.image = image
-        }
-    }
-
-    func displayImageError(_ errorImage: UIImage?) {
-        DispatchQueue.main.async {
-            self.imageView.image = errorImage
-        }
-    }
-
 }

@@ -68,6 +68,7 @@ extension CategoriesViewController {
     }
 
     func fetchCategories() {
+        showLoading(true)
         interactor?.fetchCategories()
     }
 

@@ -1,17 +1,7 @@
 import Foundation
 
-protocol PhotoDetailDataStore {
-    var imageURL: URL? { get set}
-}
-
 protocol PhotoDetailBusinessLogic {
     func downloadImage()
-}
-
-final class PhotoDetailInteractor: PhotoDetailDataStore {
-    var imageURL: URL?
-    var presenter: PhotoDetailPresentationLogic?
-    var worker: PhotoDetailExternalCalls?
 }
 
 extension PhotoDetailInteractor: PhotoDetailBusinessLogic {

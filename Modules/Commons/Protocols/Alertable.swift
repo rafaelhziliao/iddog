@@ -19,16 +19,39 @@ protocol Alertable {
 
 extension Alertable {
 
-    func alertWithError(_ error: NetworkError) -> UIAlertController {
-        let title = R.string.localizable.errorAlertDefaultTitle()
-        let message = error.messageToPresentToUser()
-        let actionButton = R.string.localizable.errorAlertDefaultAction()
-
-        return alertWithActions(
-            title: title,
-            message: message,
-            actions: [actionButton]
+    private func alertWithoutActions(_ alert: inout UIAlertController) {
+        let dismiss = UIAlertAction(
+            title: R.string.localizable.errorAlertDefaultAction(),
+            style: .default,
+            handler: nil
         )
+        alert.addAction(dismiss)
+    }
+
+    private func alertWithoutHandlers(actions: [String]?, _ alert: inout UIAlertController) {
+        actions?.forEach {
+            let action = UIAlertAction(
+                title: $0,
+                style: .default,
+                handler: nil
+            )
+            alert.addAction(action)
+        }
+    }
+
+    private func zipActionHandlersAndActionTitles(
+        actionsTitles: [String],
+        actionsHandlers: [((UIAlertAction) -> Void)?],
+        _ alert: inout UIAlertController
+    ) {
+        for (actionTitle, handler) in zip(actionsTitles, actionsHandlers) {
+            let action = UIAlertAction(
+                title: actionTitle,
+                style: .default,
+                handler: handler
+            )
+            alert.addAction(action)
+        }
     }
 
     //swiftlint:disable:next function_body_length
@@ -39,31 +62,22 @@ extension Alertable {
         handlers: [((UIAlertAction) -> Void)?]? = nil
     ) -> UIAlertController {
 
-        let alert = UIAlertController(
+        var alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
 
         if actions == nil || actions?.isEmpty == true {
-            let dismiss = UIAlertAction(
-                title: R.string.localizable.errorAlertDefaultAction(),
-                style: .default,
-                handler: nil
-            )
-            alert.addAction(dismiss)
+            alertWithoutActions(&alert)
             return alert
         }
 
         if handlers == nil {
-            actions?.forEach {
-                let action = UIAlertAction(
-                    title: $0,
-                    style: .default,
-                    handler: nil
-                )
-                alert.addAction(action)
-            }
+            alertWithoutHandlers(
+                actions: actions,
+                &alert
+            )
             return alert
         }
 
@@ -74,15 +88,25 @@ extension Alertable {
             return alert
         }
 
-        for (actionTitle, handler) in zip(actionsTitles, actionsHandlers) {
-            let action = UIAlertAction(
-                title: actionTitle,
-                style: .default,
-                handler: handler
-            )
-            alert.addAction(action)
-        }
+        zipActionHandlersAndActionTitles(
+            actionsTitles: actionsTitles,
+            actionsHandlers: actionsHandlers,
+            &alert
+        )
+
         return alert
+    }
+
+    func alertWithError(_ error: NetworkError) -> UIAlertController {
+        let title = R.string.localizable.errorAlertDefaultTitle()
+        let message = error.messageToPresentToUser()
+        let actionButton = R.string.localizable.errorAlertDefaultAction()
+
+        return alertWithActions(
+            title: title,
+            message: message,
+            actions: [actionButton]
+        )
     }
 
     func alertWithRetry(

@@ -18,7 +18,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupVIPArchitecture()
+        setupCellArchitecture()
         buildView()
     }
 
@@ -26,12 +26,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        imageView.image = nil
-    }
-
-    private func setupVIPArchitecture() {
+    private func setupCellArchitecture() {
         let view = self
         let interactor = GalleryCollectionViewCellInteractor()
         let presenter = GalleryCollectionViewCellPresenter()
@@ -69,14 +64,10 @@ extension GalleryCollectionViewCell: Fillable {
 
 extension GalleryCollectionViewCell: GalleryCollectionViewCellDisplayLogic {
     func displayDownloadedImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.imageView.image = image
-        }
+        imageView.image = image
     }
 
     func displayImageError(_ errorImage: UIImage?) {
-        DispatchQueue.main.async {
-            self.imageView.image = errorImage
-        }
+        imageView.image = errorImage
     }
 }

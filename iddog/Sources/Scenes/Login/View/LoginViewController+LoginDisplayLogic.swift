@@ -5,29 +5,28 @@ protocol LoginDisplayLogic: class {
     func displaySignUpError(_ error: NetworkError)
 }
 
-extension LoginViewController: LoginDisplayLogic, Alertable {
+extension LoginViewController: LoginDisplayLogic, Alertable, FullScreenLoader {
     func displayCategories(with user: UserProtocol) {
-        DispatchQueue.main.async {
-            self.router?.routeToCategories()
-        }
+        showLoading(false)
+        router?.routeToCategories()
     }
 
     func displaySignUpError(_ error: NetworkError) {
-        DispatchQueue.main.async {
-            let retryAction: ((UIAlertAction) -> Void) = { action in
-                self.interactor?.signUp(with: self.emailTextField.text)
-            }
+        showLoading(false)
 
-            let cancelAction: ((UIAlertAction) -> Void) = { action in
-                self.router?.dismiss()
-            }
-
-            let alert = self.alertWithRetry(
-                retryAction,
-                cancelAction,
-                for: error
-            )
-            self.router?.routeToAlert(alert)
+        let retryAction: ((UIAlertAction) -> Void) = { [weak self] action in
+            self?.interactor?.signUp(with: self?.emailTextField.text)
         }
+
+        let cancelAction: ((UIAlertAction) -> Void) = { [weak self] action in
+            self?.router?.dismiss()
+        }
+
+        let alert = self.alertWithRetry(
+            retryAction,
+            cancelAction,
+            for: error
+        )
+        router?.routeToAlert(alert)
     }
 }

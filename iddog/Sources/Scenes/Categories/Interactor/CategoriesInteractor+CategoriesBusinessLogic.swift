@@ -19,7 +19,7 @@ extension CategoriesInteractor: CategoriesBusinessLogic {
     }
 
     func setCategoryNameOnDataStore(_ name: String) {
-        self.categoryName = name
+        categoryName = name
         presenter?.presentCategoryGallery()
     }
 }

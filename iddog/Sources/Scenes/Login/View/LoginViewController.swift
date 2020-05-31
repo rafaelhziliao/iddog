@@ -99,6 +99,7 @@ final class LoginViewController: UIViewController {
 
 private extension LoginViewController {
     @objc func didTapSignUpButton(sender: Any) {
+        showLoading(true)
         interactor?.signUp(with: emailTextField.text)
     }
 }

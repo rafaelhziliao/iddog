@@ -20,6 +20,8 @@ final class GalleryViewController: UIViewController {
         collection.backgroundColor = R.color.appLightGray()
         collection.delegate = self
         collection.dataSource = self
+        collection.isPrefetchingEnabled = true
+        collection.prefetchDataSource = self
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.register(GalleryCollectionViewCell.self)
         return collection
@@ -57,6 +59,7 @@ final class GalleryViewController: UIViewController {
     }
 
     private func getLinkList() {
+        showLoading(true)
         interactor?.getLinkList()
     }
 }
