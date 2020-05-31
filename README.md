@@ -31,7 +31,7 @@ Um aplicativo iOS que mostra fotos de diferentes raças de cachorro.
 
 `OBS 1:` Esse projeto usa o [xUnique](https://github.com/truebit/xUnique) uma dependência do Python que serve para manter o arquivo `.pbxproj` organizado, então lembre-se de commitar os arquivos alterados por ele.
 
-`OBS 2:` Esse projeto usa o [blundler](https://bundler.io/) para o controle de gems como cocoapods, fastlane, slather, então caso queira instalar os pods ou atualiza-los faça através do comando `bundle exec pod ...`
+`OBS 2:` Esse projeto usa o [bundler](https://bundler.io/) para o controle de gems como cocoapods, fastlane, slather, então caso queira instalar os pods ou atualiza-los faça através do comando `bundle exec pod ...`
 
 ## Arquitetura
 
