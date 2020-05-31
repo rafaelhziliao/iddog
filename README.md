@@ -55,8 +55,7 @@ Esse aplicativo segue o [**VIP** (Clean Swift Architecture)](https://hackernoon.
 `OBS 2:` Como não existe na documentação um endpoint que retorna as 4 possíveis raças, considerei inviável a realização de 4 requests, apenas para obter o nome da raça a ser utilizada para retornar a lista de links usada na galeria, sendo assim essa chamada foi feita através de um [mock](https://github.com/rafaelhziliao/iddog/blob/master/iddog/Sources/Scenes/Categories/Worker/CategoriesWorker%2BCategoriesExternalCalls.swift), onde a estrutura retorna o nome da raça e um boolean que representa a existência ou não de fotos.
 
 ### Dependências
-Todas as dependências do projeto e bibliotecas de terceiros utilizadas nesse projeto e suas respectivas versãos podem ser encontradas em
-> Todas as dependências e bibliotecas de terceiros utilizadas nesse projeto e suas respectivas versãos podem ser encontradas em[Podfile](https://github.com/rafaelhziliao/iddog/blob/master/Podfile).
+> Todas as dependências e bibliotecas de terceiros utilizadas nesse projeto e suas respectivas versões podem ser encontradas no [Podfile](https://github.com/rafaelhziliao/iddog/blob/master/Podfile).
 
 * [**R.swift**](https://github.com/mac-cain13/R.swift) Usado para deixar recursos como imagens, cores e fontes customizadas fortemente tipadas evitando o uso de strings hard coded
 * [**SwiftLint**](https://github.com/realm/SwiftLint) Ferramenta para reforçar o estilo Swift e suas convenções
