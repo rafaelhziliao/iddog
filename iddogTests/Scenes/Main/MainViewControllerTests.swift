@@ -59,19 +59,21 @@ class MainViewControllerTests: XCTestCase {
 
     func testRequestCredentialsWhenViewIsLoaded() {
         // Given
-        let spy = MainBusinessLogicSpy()
-        sut.interactor = spy
+        let mainBusinessLogicSpy = MainBusinessLogicSpy()
+        sut.interactor = mainBusinessLogicSpy
 
         // When
         loadView()
 
         // Then
-        XCTAssertTrue(spy.requestCredentialsCalled, "viewDidLoad() should ask the interactor to request crendentials")
+        XCTAssertTrue(
+            mainBusinessLogicSpy.requestCredentialsCalled,
+            "viewDidLoad() should ask the interactor to request crendentials"
+        )
     }
 
     func testDisplayLoginScene() {
         // Given
-        loadView()
         let mainRouterSpy = MainRoutingLogicSpy()
         sut.router = mainRouterSpy
 
@@ -84,7 +86,6 @@ class MainViewControllerTests: XCTestCase {
 
     func testDisplayCategoriesScene() {
         // Given
-        loadView()
         let mainRouterSpy = MainRoutingLogicSpy()
         sut.router = mainRouterSpy
 
