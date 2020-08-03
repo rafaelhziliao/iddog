@@ -117,7 +117,7 @@ class CategoriesViewControllerTests: XCTestCase {
         sut.displayCategories(displayedCategories)
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             tableViewSpy.reloadDataCalled,
             "Displaying fetched categories should reload the table view"
         )
@@ -132,7 +132,7 @@ class CategoriesViewControllerTests: XCTestCase {
         sut.displayCategoryGallery()
 
         // Then
-         XCTAssert(
+         XCTAssertTrue(
             categoryRouterSpy.routeToCategoryGalleryCalled,
             "Displaying a successfully category gallery scene"
         )
@@ -147,7 +147,7 @@ class CategoriesViewControllerTests: XCTestCase {
         sut.displayLogoutConfirmation()
 
         // Then
-         XCTAssert(
+         XCTAssertTrue(
             categoryRouterSpy.routeToLogoutConfirmationCalled,
             "Displaying a successfully logout confirmation alert"
         )
@@ -163,7 +163,7 @@ class CategoriesViewControllerTests: XCTestCase {
         sut.displayLogin()
 
         // Then
-         XCTAssert(
+        XCTAssertTrue(
             categoryRouterSpy.routeToLoginCalled,
             "Displaying a successfully login scene"
         )
@@ -233,7 +233,7 @@ class CategoriesViewControllerTests: XCTestCase {
         sut.tableView(tableView, didSelectRowAt: indexPath)
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             categoriesBusinessLogicSpy.setCategoryNameOnDataStoreCalled,
             "Store category name on select row at table view"
         )

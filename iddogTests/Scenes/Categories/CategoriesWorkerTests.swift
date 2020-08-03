@@ -79,7 +79,7 @@ class CategoriesWorkerTests: XCTestCase {
         sut.clearCredentials()
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             crendentialsStorageSpy.clearCalled,
             "Calling clearCredentials() should ask to credentialsStorage to clear data"
         )

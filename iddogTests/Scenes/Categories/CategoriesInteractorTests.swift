@@ -81,11 +81,11 @@ class CategoriesInteractorTests: XCTestCase {
         sut.logout()
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             categoriesExternalCallsSpy.clearCredentialsCalled,
             "logout() should ask CategoriesWorker to clear credentials"
         )
-        XCTAssert(
+        XCTAssertTrue(
             categoriesPresentationLogicSpy.presentLoginCalled,
             "logout() should ask presenter to present login"
         )
@@ -103,11 +103,11 @@ class CategoriesInteractorTests: XCTestCase {
         sut.fetchCategories()
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             categoriesExternalCallsSpy.fecthCategoriesCalled,
             "fetchCategories() should ask CategoriesWorker to fetch categories"
         )
-        XCTAssert(
+        XCTAssertTrue(
             categoriesPresentationLogicSpy.presentCategoriesCalled,
             "fetchCategories() should ask presenter to present categories"
         )
@@ -125,7 +125,7 @@ class CategoriesInteractorTests: XCTestCase {
         // Then
         XCTAssertEqual(categoryName, sut.categoryName)
 
-        XCTAssert(
+        XCTAssertTrue(
             categoriesPresentationLogicSpy.presentCategoryGalleryCalled,
             "setCategoryNameOnDataStore() should ask presenter to present category gallery"
         )
