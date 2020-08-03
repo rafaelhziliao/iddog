@@ -14,7 +14,6 @@ final class MainSceneFactory: RootSceneType {
         let router = MainRouter(window: window)
 
         let worker = MainWorker(
-            network: URLSessionProvider(),
             credentialStorage: CredentialStorage()
         )
 
