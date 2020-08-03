@@ -99,7 +99,7 @@ extension Alertable {
 
     func alertWithError(_ error: NetworkError) -> UIAlertController {
         let title = R.string.localizable.errorAlertDefaultTitle()
-        let message = error.messageToPresentToUser()
+        let message = error.localizedDescription
         let actionButton = R.string.localizable.errorAlertDefaultAction()
 
         return alertWithActions(
@@ -120,7 +120,7 @@ extension Alertable {
         ]
         let alert = alertWithActions(
             title: R.string.localizable.somethingWrong(),
-            message: error.messageToPresentToUser(),
+            message: error.localizedDescription,
             actions: actions,
             handlers: [
                 retry,

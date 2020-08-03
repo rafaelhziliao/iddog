@@ -9,6 +9,7 @@ extension LoginInteractor: LoginBusinessLogic {
         worker?.signUp(with: email) { [weak self]response in
             switch response {
             case let .success(credentials):
+                self?.worker?.storeAccessToken(credentials.user.token)
                 self?.presenter?.presentCategories(user: credentials.user)
             case let .failure(error):
                 self?.presenter?.presentSignUpError(error)

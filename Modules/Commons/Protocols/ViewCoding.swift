@@ -1,16 +1,18 @@
 import UIKit
 
-public protocol ViewCodable {
+public protocol ViewCoding {
     func buildViewHierarchy()
     func setupConstraints()
     func additionalSetup()
     func buildView()
 }
 
-extension ViewCodable {
+extension ViewCoding {
     public func buildView() {
         buildViewHierarchy()
         setupConstraints()
         additionalSetup()
     }
+
+    public func additionalSetup() {}
 }

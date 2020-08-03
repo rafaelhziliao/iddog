@@ -26,6 +26,11 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        interactor?.cancelDownload()
+    }
+
     private func setupCellArchitecture() {
         let view = self
         let interactor = GalleryCollectionViewCellInteractor()
@@ -41,7 +46,7 @@ class GalleryCollectionViewCell: UICollectionViewCell, Identifiable {
     }
 }
 
-extension GalleryCollectionViewCell: ViewCodable {
+extension GalleryCollectionViewCell: ViewCoding {
     func buildViewHierarchy() {
         contentView.addSubview(imageView)
     }
@@ -52,8 +57,6 @@ extension GalleryCollectionViewCell: ViewCodable {
         imageView.widthConstraintEqualTo(parentView: contentView)
         imageView.heightConstraintEqualTo(parentView: contentView)
     }
-
-    func additionalSetup() {}
 }
 
 extension GalleryCollectionViewCell: Fillable {

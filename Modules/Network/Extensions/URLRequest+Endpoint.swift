@@ -1,7 +1,7 @@
 import Foundation
 
 extension URLRequest {
-    init?(endpoint: EndpointProtocol) {
+    init?(endpoint: EndpointDescriptor) {
         guard
             let urlComponents = URLComponents(endpoint: endpoint),
             let url = urlComponents.url

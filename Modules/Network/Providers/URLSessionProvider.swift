@@ -7,10 +7,7 @@ public final class URLSessionProvider: NetworkProviderProtocol, RequestHandleRes
         session = URLSession(configuration: URLSession.shared.configuration)
     }
 
-    public func performRequest<T: Decodable>(
-        endpoint: EndpointProtocol,
-        result: @escaping ResultHandler<T>
-    ) {
+    public func performRequest<T: Decodable>(endpoint: EndpointDescriptor, result: @escaping ResultHandler<T>) {
         guard let request = URLRequest(endpoint: endpoint) else { preconditionFailure("Fail on create request") }
 
         let task = session.dataTask(with: request) { data, response, error in

@@ -11,22 +11,17 @@ public extension TreatJSONDecode {
             let decodable = try decoder.decode(T.self, from: data)
             result(.success(decodable))
         } catch DecodingError.keyNotFound(let key, let context) {
-            result(.failure(
-                NetworkError(description:
-                    "Failed to decode missing key '\(key.stringValue)' not found – \(context.debugDescription)")
-                )
-            )
+            let description = """
+                Failed to decode missing key '\(key.stringValue)'
+                not found – \(context.debugDescription)
+            """
+            result(.failure(NetworkError(description: description)))
         } catch DecodingError.typeMismatch(_, let context) {
-            result(.failure(
-                NetworkError(description: "Failed to decode to type mismatch – \(context.debugDescription)")
-                )
-            )
+            let description = "Failed to decode to type mismatch – \(context.debugDescription)"
+            result(.failure(NetworkError(description: description)))
         } catch DecodingError.valueNotFound(let type, let context) {
-            result(.failure(
-                NetworkError(
-                    description: "Failed to decode to missing \(type) value – \(context.debugDescription)")
-                )
-            )
+            let descritpion = "Failed to decode to missing \(type) value – \(context.debugDescription)"
+            result(.failure(NetworkError(description: descritpion)))
         } catch DecodingError.dataCorrupted(_) {
             result(.failure(.noJSONData))
         } catch {

@@ -1,7 +1,7 @@
 import Foundation
 
 extension URLComponents {
-    init?(endpoint: EndpointProtocol) {
+    init?(endpoint: EndpointDescriptor) {
         self.init()
         scheme = endpoint.scheme
         host = endpoint.host

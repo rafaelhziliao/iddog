@@ -13,10 +13,7 @@ final class PhotoDetailViewController: UIViewController {
 
     // MARK: Object lifecycle
 
-    override init(
-        nibName nibNameOrNil: String?,
-        bundle nibBundleOrNil: Bundle?
-    ) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
@@ -42,7 +39,7 @@ final class PhotoDetailViewController: UIViewController {
     }
 }
 
-extension PhotoDetailViewController: ViewCodable {
+extension PhotoDetailViewController: ViewCoding {
     func buildViewHierarchy() {
         view.addSubview(imageView)
     }

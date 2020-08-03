@@ -6,7 +6,7 @@ protocol PhotoDetailExternalCalls {
 
 extension PhotoDetailWorker: PhotoDetailExternalCalls {
     func fetchImage(from url: URL, result: @escaping ResulImageHandler) {
-        imageLoaderService.loadImage(with: url) { response in
+        imageLoaderService.downloadImage(with: url) { response in
             switch response {
             case let .success(image):
                 result(.success(image))
