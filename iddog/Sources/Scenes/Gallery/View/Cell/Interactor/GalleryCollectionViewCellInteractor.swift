@@ -2,6 +2,7 @@ import Foundation
 
 protocol GalleryCollectionViewCellBusinessLogic {
     func downloadImage(from url: URL)
+    func cancelDownload()
 }
 
 final class GalleryCollectionViewCellInteractor {
@@ -19,5 +20,9 @@ extension GalleryCollectionViewCellInteractor: GalleryCollectionViewCellBusiness
                 self?.presenter?.presentImageError()
             }
         }
+    }
+
+    func cancelDownload() {
+        worker?.cancelDownload()
     }
 }

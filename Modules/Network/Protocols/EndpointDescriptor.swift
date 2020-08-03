@@ -4,7 +4,7 @@ public typealias Header = [String: String]
 public typealias Parameters = [String: Any]
 public typealias Body = [String: Any]
 
-public protocol EndpointProtocol {
+public protocol EndpointDescriptor {
     var scheme: String { get }
     var host: String { get }
     var path: String { get }

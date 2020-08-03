@@ -271,16 +271,16 @@ public extension NSLayoutConstraint {
     static func centerX(
         firstView: UIView,
         secondView: UIView,
-        constant: Float = 0)
-        -> NSLayoutConstraint {
-            return NSLayoutConstraint(
-                item: firstView,
-                attribute: NSLayoutConstraint.Attribute.centerX,
-                relatedBy: NSLayoutConstraint.Relation.equal,
-                toItem: secondView,
-                attribute: NSLayoutConstraint.Attribute.centerX,
-                multiplier: 1,
-                constant: CGFloat(constant)
-            )
+        constant: Float = 0
+    ) -> NSLayoutConstraint {
+        return NSLayoutConstraint(
+            item: firstView,
+            attribute: NSLayoutConstraint.Attribute.centerX,
+            relatedBy: NSLayoutConstraint.Relation.equal,
+            toItem: secondView,
+            attribute: NSLayoutConstraint.Attribute.centerX,
+            multiplier: 1,
+            constant: CGFloat(constant)
+        )
     }
 }

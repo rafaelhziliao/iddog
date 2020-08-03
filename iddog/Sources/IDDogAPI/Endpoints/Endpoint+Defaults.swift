@@ -1,6 +1,6 @@
 import Foundation
 
-extension EndpointProtocol {
+extension EndpointDescriptor {
     var scheme: String {
         return "https"
     }

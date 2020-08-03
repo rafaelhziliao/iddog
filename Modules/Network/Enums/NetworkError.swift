@@ -11,13 +11,7 @@ public enum NetworkError: Error {
     case badRequest
     case outDated
 
-    public init(description: String) {
-        self = .custom(description: description)
-    }
-}
-
-extension NetworkError {
-    func messageToPresentToUser() -> String {
+    var localizedDescription: String {
         switch self {
         case let .custom(description):
             return description
@@ -28,5 +22,9 @@ extension NetworkError {
         case .unauthorized:
             return R.string.localizable.invalidInput()
         }
+    }
+
+    public init(description: String) {
+        self = .custom(description: description)
     }
 }

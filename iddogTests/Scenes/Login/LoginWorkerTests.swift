@@ -1,16 +1,16 @@
 @testable import iddog
 import XCTest
 
-class CategoriesWorkerTests: XCTestCase {
+class LoginWorkerTests: XCTestCase {
     // MARK: Subject under test
 
-    var sut: CategoriesWorker!
+    var sut: LoginWorker!
 
     // MARK: Test lifecycle
 
     override func setUp() {
         super.setUp()
-        setupCategoriesWorker()
+        setupLoginWorker()
     }
 
     override func tearDown() {
@@ -19,8 +19,8 @@ class CategoriesWorkerTests: XCTestCase {
 
     // MARK: Test setup
 
-    func setupCategoriesWorker() {
-        sut = CategoriesWorker(
+    func setupLoginWorker() {
+        sut = LoginWorker(
             network: NetworkProviderSpy(),
             credentialStorage: CrendentialsStorageSpy()
         )
@@ -42,17 +42,17 @@ class CategoriesWorkerTests: XCTestCase {
 
     class CrendentialsStorageSpy: SecurityStorageProtocol {
         var service: SecurityServiceProtocol
-        var clearCalled =  false
+        var setAccessTokenAsyncCalled =  false
 
         func getAccessTokenSync() -> String? {
             return nil
         }
 
-        func setAccessTokenAsync(_ token: String?) {}
-
-        func clear() {
-            clearCalled = true
+        func setAccessTokenAsync(_ token: String?) {
+            setAccessTokenAsyncCalled = true
         }
+
+        func clear() {}
 
         init(service: SecurityServiceProtocol = SecurityServiceSpy()) {
             self.service = service
@@ -69,55 +69,54 @@ class CategoriesWorkerTests: XCTestCase {
 
     // MARK: Tests
 
-    func testWorkerAskToCredentialStorageClearData() {
+    func testWorkerAskToCredentialStorageToStoreAccessToken() {
         // Given
+        let token = "token"
 
         //swiftlint:disable:next force_cast
         let crendentialsStorageSpy = sut.credentialStorage as! CrendentialsStorageSpy
 
         // When
-        sut.clearCredentials()
+        sut.storeAccessToken(token)
 
         // Then
         XCTAssertTrue(
-            crendentialsStorageSpy.clearCalled,
-            "Calling clearCredentials() should ask to credentialsStorage to clear data"
+            crendentialsStorageSpy.setAccessTokenAsyncCalled,
+            "Calling storeAccessToken(token) should ask to credentialsStorage to store token"
         )
     }
 
-    func testWorkerFetchCategories() {
+    func testWorkerAskToNetworkProviderToSignUp() {
         // Given
-        let categoriesMock: CategoriesModel = [
-            CategoryModel(
-                name: "husky",
-                hasPhoto: true
-            ),
-            CategoryModel(
-                name: "hound",
-                hasPhoto: true
-            ),
-            CategoryModel(
-                name: "pug",
-                hasPhoto: true
-            ),
-            CategoryModel(
-                name: "labrador",
-                hasPhoto: true
-            )
-        ]
+        let email = "teste@teste.com"
 
-        var expectedCategories: CategoriesModel = []
+        //swiftlint:disable:next force_cast
+        let networkProviderSpy = sut.network as! NetworkProviderSpy
 
         // When
-        sut.fecthCategories { categories in
-            expectedCategories = categories
-        }
+        sut.signUp(with: email) { _ in }
 
         // Then
-        XCTAssertEqual(
-            categoriesMock.count,
-            expectedCategories.count
+        XCTAssertTrue(
+            networkProviderSpy.performRequestCalled,
+            "Calling sut.signUp(with: email) should ask to network to signUp"
         )
     }
 
+    func testWorkerNotAskToNetworkProviderToSignUp() {
+        // Given
+        let email: String? = nil
+
+        //swiftlint:disable:next force_cast
+        let networkProviderSpy = sut.network as! NetworkProviderSpy
+
+        // When
+        sut.signUp(with: email) { _ in }
+
+        // Then
+        XCTAssertFalse(
+            networkProviderSpy.performRequestCalled,
+            "Calling sut.signUp(with: email) should not ask to network to signUp"
+        )
+    }
 }

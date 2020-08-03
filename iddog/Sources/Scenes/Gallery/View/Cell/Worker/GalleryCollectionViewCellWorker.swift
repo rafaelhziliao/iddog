@@ -2,6 +2,7 @@ import Foundation
 
 protocol GalleryCollectionViewCellExternalCalls {
     func fetchImage(from url: URL, result: @escaping ResulImageHandler)
+    func cancelDownload()
 }
 
 final class GalleryCollectionViewCellWorker {
@@ -17,7 +18,7 @@ final class GalleryCollectionViewCellWorker {
 extension GalleryCollectionViewCellWorker: GalleryCollectionViewCellExternalCalls {
     func fetchImage(from url: URL, result: @escaping ResulImageHandler) {
 
-        imageLoaderService.loadImage(with: url) { response in
+        imageLoaderService.downloadImage(with: url) { response in
             switch response {
             case let .success(image):
                 result(.success(image))
@@ -25,5 +26,9 @@ extension GalleryCollectionViewCellWorker: GalleryCollectionViewCellExternalCall
                 result(.failure(error))
             }
         }
+    }
+
+    func cancelDownload() {
+        imageLoaderService.cancelDownload()
     }
 }

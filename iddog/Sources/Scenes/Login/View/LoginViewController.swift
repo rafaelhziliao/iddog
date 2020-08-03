@@ -97,14 +97,14 @@ final class LoginViewController: UIViewController {
     }
 }
 
-private extension LoginViewController {
+extension LoginViewController {
     @objc func didTapSignUpButton(sender: Any) {
         showLoading(true)
         interactor?.signUp(with: emailTextField.text)
     }
 }
 
-extension LoginViewController: ViewCodable {
+extension LoginViewController: ViewCoding {
     func buildViewHierarchy() {
         view.addSubview(appNameLabel)
         view.addSubview(contentStackView)

@@ -1,6 +1,6 @@
 import Foundation
 
-struct SignupEndpoint: EndpointProtocol {
+struct SignupEndpoint: EndpointDescriptor {
     var path: String {
         return "/signup"
     }

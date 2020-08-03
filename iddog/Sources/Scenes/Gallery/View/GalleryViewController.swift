@@ -64,7 +64,7 @@ final class GalleryViewController: UIViewController {
     }
 }
 
-extension GalleryViewController: ViewCodable {
+extension GalleryViewController: ViewCoding {
     func buildViewHierarchy() {
         view.addSubview(collectionView)
     }

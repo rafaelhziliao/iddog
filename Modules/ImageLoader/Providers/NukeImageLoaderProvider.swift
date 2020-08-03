@@ -3,15 +3,17 @@ import Nuke
 
 public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
     private let preheater = ImagePreheater()
+    private let pipeLine = ImagePipeline.shared
+    private var task: ImageTask!
 
     public init () {
         configure()
     }
 
-    public func loadImage(with url: URL, result: @escaping ResulImageHandler) {
+    public func downloadImage(with url: URL, result: @escaping ResulImageHandler) {
         let request = ImageRequest(url: url)
 
-        ImagePipeline.shared.loadImage(with: request, queue: nil, progress: nil) { response in
+        task = pipeLine.loadImage(with: request, queue: nil, progress: nil) { response in
             DispatchQueue.main.async {
                 switch response {
                 case let .success(imageResponse):
@@ -21,6 +23,10 @@ public final class NukeImageLoaderProvider: ImageLoaderServiceProtocol {
                 }
             }
         }
+    }
+
+    public func cancelDownload() {
+        task.cancel()
     }
 
     private func configure() {

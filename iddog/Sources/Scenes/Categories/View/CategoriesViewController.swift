@@ -77,7 +77,7 @@ extension CategoriesViewController {
     }
 }
 
-extension CategoriesViewController: ViewCodable {
+extension CategoriesViewController: ViewCoding {
     func buildViewHierarchy() {
         view.addSubview(tableView)
     }

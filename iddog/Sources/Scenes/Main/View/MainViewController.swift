@@ -53,7 +53,7 @@ private extension MainViewController {
     }
 }
 
-extension MainViewController: ViewCodable {
+extension MainViewController: ViewCoding {
     func buildViewHierarchy() {
         view.addSubview(appNameLabel)
         view.addSubview(authorLabel)

@@ -3,7 +3,8 @@ import UIKit
 public typealias ResulImageHandler = (Result<UIImage, Error>) -> Void
 
 public protocol ImageLoaderServiceProtocol {
-    func loadImage(with url: URL, result: @escaping ResulImageHandler)
+    func downloadImage(with url: URL, result: @escaping ResulImageHandler)
+    func cancelDownload()
     func starPrefetchDataSourceOperation(with urls: [URL])
     func cancelPrefethcDataSoucerOperation(with urls: [URL])
 }
