@@ -62,11 +62,11 @@ class MainInteractorTests: XCTestCase {
         sut.requestCredentials()
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             mainExternalCallsSpy.requestCrendentialsCalled,
             "requestCredentials() should ask MainWorker to request credentials"
         )
-        XCTAssert(
+        XCTAssertTrue(
             mainPresentationLogicSpy.presentLoginCalled,
             "requestCredentials() should ask presenter to present login"
         )
@@ -84,11 +84,11 @@ class MainInteractorTests: XCTestCase {
         sut.requestCredentials()
 
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             mainExternalCallsSpy.requestCrendentialsCalled,
             "requestCredentials() should ask MainWorker to request credentials"
         )
-        XCTAssert(
+        XCTAssertTrue(
             mainPresentationLogicSpy.presentCategoriesCalled,
             "requestCredentials() should ask presenter to present categories"
         )

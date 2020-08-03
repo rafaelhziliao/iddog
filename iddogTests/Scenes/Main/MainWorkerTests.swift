@@ -66,7 +66,7 @@ class MainWorkerTests: XCTestCase {
             fetchedToken = token
         }
         // Then
-        XCTAssert(
+        XCTAssertTrue(
             crendentialsStorageSpy.getAccessTokenSyncCalled,
             "Calling requestCrendentials() should ask to credentialsStorage for a token"
         )

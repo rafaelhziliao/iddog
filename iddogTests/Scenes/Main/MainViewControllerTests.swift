@@ -81,7 +81,7 @@ class MainViewControllerTests: XCTestCase {
         sut.displayLogin()
 
         // Then
-        XCTAssert(mainRouterSpy.routeToLoginCalled, "Displaying a successfully login scene")
+        XCTAssertTrue(mainRouterSpy.routeToLoginCalled, "Displaying a successfully login scene")
     }
 
     func testDisplayCategoriesScene() {
@@ -93,7 +93,7 @@ class MainViewControllerTests: XCTestCase {
         sut.displayCategories()
 
         // Then
-        XCTAssert(mainRouterSpy.routeToCategoriesCalled, "Displaying a successfully categories scene")
+        XCTAssertTrue(mainRouterSpy.routeToCategoriesCalled, "Displaying a successfully categories scene")
 
     }
 }
